@@ -77,7 +77,32 @@ def filter_and_deduplicate(raw_items):
     return valid_items
 
 def format_slack_payload(filtered_items):
-    """Formats the top 30 valid items into a Slack Block Kit payload."""
+    """
+    Formats the top 30 valid items into a single, compact Slack Block Kit payload
+    to avoid hitting Slack's 50-block maximum limit.
+    """
+    # 1. Initialize a list to hold the formatted text strings for each game
+    game_lines = []
+    
+    # 2. Iterate through the filtered list and build each line
+    for rank, item in enumerate(filtered_items, start=1):
+        name = item.get("name")
+        appid = item.get("id") or item.get("appid")
+        
+        # Check multiple common Steam JSON price keys
+        price_cents = item.get("price", {}).get("final") or item.get("final_price") or 0
+        price = f"${price_cents / 100:.2f}" if price_cents else "Free / Unknown"
+        
+        store_url = f"https://store.steampowered.com/app/{appid}/"
+        
+        # Append the specific compact markdown format requested
+        game_lines.append(f"{rank}. *{name}* — {price} | <{store_url}|Store Page>")
+    
+    # 3. Join all the individual game strings together using a newline character (\n)
+    # This creates one large continuous text block containing all 30 games.
+    combined_games_text = "\n".join(game_lines)
+    
+    # 4. Construct the final Block Kit payload using only 4 blocks
     blocks = [
         {
             "type": "header",
@@ -96,33 +121,15 @@ def format_slack_payload(filtered_items):
                 }
             ]
         },
-        {"type": "divider"}
-    ]
-
-    for rank, item in enumerate(filtered_items, start=1):
-        name = item.get("name")
-        appid = item.get("id") or item.get("appid")
-        
-        # Price formatting (checking multiple common Steam JSON price keys)
-        price_cents = item.get("price", {}).get("final") or item.get("final_price") or 0
-        price = f"${price_cents / 100:.2f}" if price_cents else "Free / Unknown"
-        
-        store_url = f"https://store.steampowered.com/app/{appid}/"
-        # Accommodate different image keys depending on the endpoint payload
-        image_url = item.get("header_image") or item.get("tiny_image") or ""
-        
-        blocks.append({
+        {"type": "divider"},
+        {
             "type": "section",
             "text": {
                 "type": "mrkdwn",
-                "text": f"*{rank}. {name}*\nPrice: {price} | <{store_url}|Store Page>"
-            },
-            "accessory": {
-                "type": "image",
-                "image_url": image_url,
-                "alt_text": name
+                "text": combined_games_text
             }
-        })
+        }
+    ]
         
     return {"blocks": blocks}
 
