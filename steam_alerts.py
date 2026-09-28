@@ -18,57 +18,44 @@ GAME_BLOCKLIST = [
     "overwatch", "rust", "kingdom hearts"
 ]
 
-def fetch_top_100_sellers():
+def fetch_top_100_steam_native():
     """
-    Fetches the Top 100 Global Sellers from a reliable 3rd-party API 
-    because Steam's 'storesearch' is hard-limited to 10 items.
+    Paginates through Steam's official storesearch API to build a 100-item buffer.
+    This avoids reliance on third-party APIs and HTML scraping.
     """
-    url = "https://games-popularity.com/swagger/api/top-sellers"
-    try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-        data = response.json()
-        
-        # Handle if the API returns a direct list or is wrapped in a dict
-        if isinstance(data, list):
-            return data
-        return data.get("items") or data.get("data") or []
-    except requests.exceptions.RequestException as e:
-        print(f"Error fetching top 100 sellers: {e}")
-        return []
-
-def get_steam_price(appid):
-    """
-    Fetches the official price from Steam's appdetails endpoint.
-    Prices are returned in cents, and this endpoint bypasses age gates.
-    """
-    url = f"https://store.steampowered.com/api/appdetails?appids={appid}"
-    try:
-        response = requests.get(url, timeout=5)
-        data = response.json()
-        
-        app_data = data.get(str(appid), {})
-        if not app_data.get("success"):
-            return "Unknown"
+    url = "https://store.steampowered.com/api/storesearch/"
+    all_items = []
+    
+    print("Paginating through Steam API to fetch top 100 sellers...")
+    # Loop from 0 to 90 in steps of 10
+    for start_idx in range(0, 100, 10):
+        params = {
+            "term": "",
+            "search_filter": "topsellers",
+            "cc": "US",
+            "l": "english",
+            "start": start_idx,
+            "count": 10
+        }
+        try:
+            response = requests.get(url, params=params, timeout=10)
+            response.raise_for_status()
+            data = response.json()
             
-        game_info = app_data.get("data", {})
-        
-        # Check if the game is listed as free
-        if game_info.get("is_free"):
-            return "Free / Unknown"
+            items = data.get("items", [])
+            if not items:
+                break # Stop if Steam stops returning items
+                
+            all_items.extend(items)
+            time.sleep(0.5) # Brief pause to respect Steam's rate limits
+        except requests.exceptions.RequestException as e:
+            print(f"Error fetching batch at start={start_idx}: {e}")
+            break
             
-        price_overview = game_info.get("price_overview")
-        if price_overview:
-            # Convert cents to decimal format
-            cents = price_overview.get("final", 0)
-            return f"${cents / 100:.2f}"
-            
-        return "Unknown"
-    except Exception:
-        return "Unknown"
+    return all_items
 
 def filter_and_deduplicate(raw_items):
-    """Cleans the raw 100-item list and outputs exactly 30 valid games."""
+    """Cleans the raw buffer list and outputs exactly 30 valid games."""
     valid_items = []
     seen_ids = set()
     seen_names = set()
@@ -76,8 +63,7 @@ def filter_and_deduplicate(raw_items):
     all_excluded = HARDWARE_BLOCKLIST + GAME_BLOCKLIST
 
     for item in raw_items:
-        # Accommodate different potential JSON key names
-        appid = item.get("steamId") or item.get("appid") or item.get("id")
+        appid = item.get("id") or item.get("appid")
         name = item.get("name", "")
         name_lower = name.lower()
         
@@ -91,8 +77,7 @@ def filter_and_deduplicate(raw_items):
         if is_blocked:
             continue
             
-        # Add to our valid list
-        valid_items.append({"appid": appid, "name": name})
+        valid_items.append(item)
         seen_ids.add(appid)
         seen_names.add(name_lower)
         
@@ -102,22 +87,24 @@ def filter_and_deduplicate(raw_items):
     return valid_items
 
 def format_slack_payload(filtered_items):
-    """Fetches pricing for the 30 items and formats them into a single Slack block."""
-    game_lines = []
-    
-    print("Fetching live prices from Steam for 30 items...")
-    for rank, item in enumerate(filtered_items, start=1):
-        name = item["name"]
-        appid = item["appid"]
+    """Formats the filtered items safely, ensuring an empty string is never sent."""
+    # Safeguard: Handle the case where no items were found to prevent a 400 Bad Request
+    if not filtered_items:
+        combined_games_text = "⚠️ *No valid top sellers found.* The Steam API might be down or returning empty results."
+    else:
+        game_lines = []
+        for rank, item in enumerate(filtered_items, start=1):
+            name = item.get("name")
+            appid = item.get("id")
+            
+            # Since we are using storesearch, the price is provided natively
+            price_cents = item.get("price", {}).get("final") or 0
+            price = f"${price_cents / 100:.2f}" if price_cents else "Free / Unknown"
+            
+            store_url = f"https://store.steampowered.com/app/{appid}/"
+            game_lines.append(f"{rank}. *{name}* — {price} | <{store_url}|Store Page>")
         
-        # Get the official price (with a tiny delay to be polite to Steam's servers)
-        price = get_steam_price(appid)
-        time.sleep(0.1) 
-        
-        store_url = f"https://store.steampowered.com/app/{appid}/"
-        game_lines.append(f"{rank}. *{name}* — {price} | <{store_url}|Store Page>")
-    
-    combined_games_text = "\n".join(game_lines)
+        combined_games_text = "\n".join(game_lines)
     
     blocks = [
         {
@@ -133,7 +120,7 @@ def format_slack_payload(filtered_items):
             "elements": [
                 {
                     "type": "mrkdwn",
-                    "text": f"Filtered Top 30 Sellers for {datetime.now().strftime('%Y-%m-%d')}."
+                    "text": f"Filtered Top Sellers for {datetime.now().strftime('%Y-%m-%d')}."
                 }
             ]
         },
@@ -163,21 +150,15 @@ def send_to_slack(payload):
             timeout=10
         )
         response.raise_for_status()
-        print("Successfully sent full 30-item report to Slack.")
+        print("Successfully sent report to Slack.")
     except requests.exceptions.RequestException as e:
         print(f"Error sending to Slack: {e}")
 
 if __name__ == "__main__":
-    print("Fetching Top 100 Steam buffer...")
-    raw_buffer = fetch_top_100_sellers()
+    raw_buffer = fetch_top_100_steam_native()
     
-    if raw_buffer:
-        clean_top_30 = filter_and_deduplicate(raw_buffer)
+    clean_top_30 = filter_and_deduplicate(raw_buffer)
+    print(f"Found {len(clean_top_30)} valid items after filtering.")
         
-        if len(clean_top_30) < 30:
-            print(f"Warning: Only found {len(clean_top_30)} valid items after filtering.")
-            
-        slack_payload = format_slack_payload(clean_top_30)
-        send_to_slack(slack_payload)
-    else:
-        print("Failed to retrieve items or API returned an empty list.")
+    slack_payload = format_slack_payload(clean_top_30)
+    send_to_slack(slack_payload)
