@@ -1,40 +1,39 @@
 name: Daily Steam Top Sellers Alert
 
-# This section defines WHEN the action will run.
 on:
   schedule:
-    # This cron expression means "Run at 14:00 UTC every day"
-    # You can change these numbers to suit your timezone.
     - cron: '0 14 * * *'
-  
-  # This allows you to manually trigger the script from the GitHub website
   workflow_dispatch: 
+
+# We must grant the action permission to write files back to the repository
+permissions:
+  contents: write
 
 jobs:
   run-steam-script:
-    # This tells GitHub to run our code on the latest version of Ubuntu Linux
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Download your code into the GitHub runner
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Step 2: Install Python on the runner
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11' # A reliable, stable version of Python
+          python-version: '3.11'
 
-      # Step 3: Install the requests library from your requirements.txt
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install requests
 
-      # Step 4: Run the Python script
       - name: Execute Steam Alerts Script
-        # We pass the secret Slack URL securely from GitHub's settings into the environment
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: python steam_alerts.py
+
+      # This new step commits the generated index.html file back to your repo
+      - name: Commit and push HTML file
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update daily Steam report HTML"
+          file_pattern: 'index.html'
