@@ -1,6 +1,7 @@
 import os
 import requests
 import json
+import time
 from datetime import datetime
 from bs4 import BeautifulSoup
 
@@ -31,7 +32,6 @@ def fetch_and_filter_steam_data():
         "cc": "US"
     }
     
-    # This header masquerades our script as a standard Google Chrome browser
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
@@ -47,7 +47,6 @@ def fetch_and_filter_steam_data():
         response = requests.get(url, params=params, headers=headers, timeout=15)
         response.raise_for_status()
         
-        # We no longer ask for .json(). We pass the raw HTML text directly to BeautifulSoup.
         soup = BeautifulSoup(response.text, 'html.parser')
         rows = soup.find_all('a', class_='search_result_row')
         
@@ -74,7 +73,6 @@ def fetch_and_filter_steam_data():
                 price_box = row.find('div', class_='search_price')
                 price = price_box.get_text(strip=True) if price_box else "Free / Unknown"
             
-            # Clean up empty price text if a game hasn't launched yet
             if not price.strip():
                 price = "TBA"
                 
@@ -95,7 +93,7 @@ def fetch_and_filter_steam_data():
         return []
 
 def generate_html_page(items):
-    """Generates a simple HTML file containing the full list of games."""
+    """Generates a simple HTML file with anti-caching meta tags."""
     date_str = datetime.now().strftime('%Y-%m-%d')
     
     html_content = f"""
@@ -103,6 +101,10 @@ def generate_html_page(items):
     <html>
     <head>
         <title>Steam Top Sellers - {date_str}</title>
+        <!-- These meta tags tell the browser NOT to cache this page -->
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
         <style>
             body {{ font-family: Arial, sans-serif; background-color: #1b2838; color: #c7d5e0; max-width: 800px; margin: 0 auto; padding: 20px; }}
             h1 {{ color: #ffffff; }}
@@ -134,7 +136,7 @@ def generate_html_page(items):
     print("Successfully generated index.html")
 
 def format_and_send_slack(items):
-    """Sends only the top 10 items to Slack and links to the HTML page."""
+    """Sends the top 10 items to Slack with a cache-busting URL."""
     if not items:
         return
         
@@ -148,7 +150,11 @@ def format_and_send_slack(items):
     if remaining_count > 0:
         game_lines.append(f"\n_...and {remaining_count} more_")
     
-    game_lines.append(f"\n<{GITHUB_PAGES_URL}|Open Full Top Sellers List>")
+    # Create a unique URL using the current time so the browser always fetches a fresh copy
+    timestamp = int(time.time())
+    cache_busting_url = f"{GITHUB_PAGES_URL}?v={timestamp}"
+    
+    game_lines.append(f"\n<{cache_busting_url}|Open Full Top Sellers List>")
     
     combined_games_text = "\n".join(game_lines)
     
