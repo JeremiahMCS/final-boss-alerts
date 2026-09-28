@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL")
 
 # Replace these with your actual GitHub username and repository name!
-GITHUB_PAGES_URL = "https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME/"
+GITHUB_PAGES_URL = "https://JeremiahMCS.github.io/final-boss-alerts/"
 
 HARDWARE_BLOCKLIST = [
     "steam deck", "steam frame", "steam machine", 
