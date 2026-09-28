@@ -2,6 +2,7 @@ import os
 import requests
 import json
 from datetime import datetime
+from bs4 import BeautifulSoup
 
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL")
 
@@ -21,38 +22,79 @@ GAME_BLOCKLIST = [
 
 def fetch_and_filter_steam_data():
     """
-    Fetches data using Steam's featuredcategories endpoint which reliably returns a larger initial chunk.
-    Filters out hardware and blocked games.
+    Forces Steam to return a 100-item batch using the infinite-scroll search endpoint.
+    Parses the structured HTML payload using BeautifulSoup.
     """
-    url = "https://store.steampowered.com/api/featuredcategories?cc=US&l=english"
+    url = "https://store.steampowered.com/search/results"
+    params = {
+        "force_infinite": 1,
+        "filter": "topsellers",
+        "start": 0,
+        "count": 100,
+        "cc": "US",
+        "l": "english"
+    }
+    
     valid_items = []
+    seen_names = set()
+    all_excluded = HARDWARE_BLOCKLIST + GAME_BLOCKLIST
     
     try:
-        response = requests.get(url, timeout=10)
+        response = requests.get(url, params=params, timeout=15)
+        response.raise_for_status()
         data = response.json()
-        raw_items = data.get("top_sellers", {}).get("items", [])
+        results_html = data.get("results_html", "")
         
-        all_excluded = HARDWARE_BLOCKLIST + GAME_BLOCKLIST
+        # Parse the HTML to extract exactly what we need
+        soup = BeautifulSoup(results_html, 'html.parser')
+        rows = soup.find_all('a', class_='search_result_row')
         
-        for item in raw_items:
-            name = item.get("name", "")
-            if not name:
+        for row in rows:
+            title_elem = row.find('span', class_='title')
+            if not title_elem:
                 continue
                 
-            is_blocked = any(excluded in name.lower() for excluded in all_excluded)
-            if not is_blocked:
-                valid_items.append(item)
+            name = title_elem.get_text(strip=True)
+            name_lower = name.lower()
+            # Strip tracking parameters from the URL
+            store_url = row.get('href', '').split('?')[0] 
+            
+            if name_lower in seen_names:
+                continue
+                
+            is_blocked = any(excluded in name_lower for excluded in all_excluded)
+            if is_blocked:
+                continue
+                
+            # Steam's HTML stores discounted prices and standard prices in different tags
+            price_elem = row.find('div', class_='discount_final_price')
+            if price_elem:
+                price = price_elem.get_text(strip=True)
+            else:
+                price_box = row.find('div', class_='search_price')
+                price = price_box.get_text(strip=True) if price_box else "Free / Unknown"
+            
+            valid_items.append({
+                "name": name,
+                "price": price,
+                "url": store_url
+            })
+            
+            seen_names.add(name_lower)
+            
+            # Stop once we have exactly 30 valid items
+            if len(valid_items) == 30:
+                break
                 
         return valid_items
     except Exception as e:
-        print(f"Error fetching data: {e}")
+        print(f"Error fetching/parsing data: {e}")
         return []
 
 def generate_html_page(items):
     """Generates a simple HTML file containing the full list of games."""
     date_str = datetime.now().strftime('%Y-%m-%d')
     
-    # Start building the HTML string
     html_content = f"""
     <!DOCTYPE html>
     <html>
@@ -71,18 +113,11 @@ def generate_html_page(items):
         <p>Filtered list for {date_str}</p>
     """
     
-    # Add each game to the HTML
     for rank, item in enumerate(items, start=1):
-        name = item.get("name")
-        appid = item.get("id")
-        price_cents = item.get("final_price", 0)
-        price = f"${price_cents / 100:.2f}" if price_cents else "Free / Unknown"
-        store_url = f"https://store.steampowered.com/app/{appid}/"
-        
         html_content += f"""
         <div class="game-item">
-            <strong>{rank}. {name}</strong> — {price} <br>
-            <a href="{store_url}" target="_blank">View on Steam Store</a>
+            <strong>{rank}. {item['name']}</strong> — {item['price']} <br>
+            <a href="{item['url']}" target="_blank">View on Steam Store</a>
         </div>
         """
         
@@ -91,7 +126,6 @@ def generate_html_page(items):
     </html>
     """
     
-    # Save the HTML to a file
     with open("index.html", "w", encoding="utf-8") as file:
         file.write(html_content)
     print("Successfully generated index.html")
@@ -101,21 +135,13 @@ def format_and_send_slack(items):
     if not items:
         return
         
-    # Slicing the list to only format the first 10 items
     top_10_items = items[:10]
     remaining_count = len(items) - len(top_10_items)
     
     game_lines = []
     for rank, item in enumerate(top_10_items, start=1):
-        name = item.get("name")
-        appid = item.get("id")
-        price_cents = item.get("final_price", 0)
-        price = f"${price_cents / 100:.2f}" if price_cents else "Free"
-        store_url = f"https://store.steampowered.com/app/{appid}/"
-        
-        game_lines.append(f"{rank}. *{name}* — {price} | <{store_url}|Store Page>")
+        game_lines.append(f"{rank}. *{item['name']}* — {item['price']} | <{item['url']}|Store Page>")
     
-    # Add the "...and X more" and link to the full list, just like the other bots
     if remaining_count > 0:
         game_lines.append(f"\n_...and {remaining_count} more_")
     
