@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL")
 
 # Replace these with your actual GitHub username and repository name!
-GITHUB_PAGES_URL = "https://JeremiahMCS.github.io/final-boss-alerts/"
+GITHUB_PAGES_URL = "https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME/"
 
 HARDWARE_BLOCKLIST = [
     "steam deck", "steam frame", "steam machine", 
@@ -22,17 +22,20 @@ GAME_BLOCKLIST = [
 
 def fetch_and_filter_steam_data():
     """
-    Forces Steam to return a 100-item batch using the infinite-scroll search endpoint.
+    Fetches the main HTML search page acting as a normal browser.
     Parses the structured HTML payload using BeautifulSoup.
     """
-    url = "https://store.steampowered.com/search/results"
+    url = "https://store.steampowered.com/search/"
     params = {
-        "force_infinite": 1,
         "filter": "topsellers",
-        "start": 0,
-        "count": 100,
-        "cc": "US",
-        "l": "english"
+        "cc": "US"
+    }
+    
+    # This header masquerades our script as a standard Google Chrome browser
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5"
     }
     
     valid_items = []
@@ -40,13 +43,12 @@ def fetch_and_filter_steam_data():
     all_excluded = HARDWARE_BLOCKLIST + GAME_BLOCKLIST
     
     try:
-        response = requests.get(url, params=params, timeout=15)
+        print("Fetching Steam search page...")
+        response = requests.get(url, params=params, headers=headers, timeout=15)
         response.raise_for_status()
-        data = response.json()
-        results_html = data.get("results_html", "")
         
-        # Parse the HTML to extract exactly what we need
-        soup = BeautifulSoup(results_html, 'html.parser')
+        # We no longer ask for .json(). We pass the raw HTML text directly to BeautifulSoup.
+        soup = BeautifulSoup(response.text, 'html.parser')
         rows = soup.find_all('a', class_='search_result_row')
         
         for row in rows:
@@ -56,7 +58,6 @@ def fetch_and_filter_steam_data():
                 
             name = title_elem.get_text(strip=True)
             name_lower = name.lower()
-            # Strip tracking parameters from the URL
             store_url = row.get('href', '').split('?')[0] 
             
             if name_lower in seen_names:
@@ -66,7 +67,6 @@ def fetch_and_filter_steam_data():
             if is_blocked:
                 continue
                 
-            # Steam's HTML stores discounted prices and standard prices in different tags
             price_elem = row.find('div', class_='discount_final_price')
             if price_elem:
                 price = price_elem.get_text(strip=True)
@@ -74,6 +74,10 @@ def fetch_and_filter_steam_data():
                 price_box = row.find('div', class_='search_price')
                 price = price_box.get_text(strip=True) if price_box else "Free / Unknown"
             
+            # Clean up empty price text if a game hasn't launched yet
+            if not price.strip():
+                price = "TBA"
+                
             valid_items.append({
                 "name": name,
                 "price": price,
@@ -82,7 +86,6 @@ def fetch_and_filter_steam_data():
             
             seen_names.add(name_lower)
             
-            # Stop once we have exactly 30 valid items
             if len(valid_items) == 30:
                 break
                 
