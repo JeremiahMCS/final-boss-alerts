@@ -3,14 +3,24 @@ name: Daily Steam Top Sellers Alert
 on:
   schedule:
     - cron: '0 14 * * *'
-  workflow_dispatch: 
+  workflow_dispatch:
 
-# We must grant the action permission to write files back to the repository
+# Permissions required for deploying to GitHub Pages
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  run-steam-script:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -31,9 +41,19 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: python steam_alerts.py
 
-      # This new step commits the generated index.html file back to your repo
-      - name: Commit and push HTML file
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare site directory
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          commit_message: "Update daily Steam report HTML"
-          file_pattern: 'index.html'
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

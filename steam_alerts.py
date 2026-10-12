@@ -5,6 +5,12 @@ import time
 from datetime import datetime
 from bs4 import BeautifulSoup
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL")
 
 # Replace these with your actual GitHub username and repository name!
@@ -158,6 +164,13 @@ def format_and_send_slack(items):
     
     combined_games_text = "\n".join(game_lines)
     
+    if not SLACK_WEBHOOK_URL:
+        print("[Notice] SLACK_WEBHOOK_URL is not set. Skipping Slack dispatch (dry-run mode).")
+        print("--- Slack Payload Preview ---")
+        print(combined_games_text)
+        print("-----------------------------")
+        return
+
     payload = {
         "blocks": [
             {
@@ -171,12 +184,17 @@ def format_and_send_slack(items):
         ]
     }
     
-    requests.post(
-        SLACK_WEBHOOK_URL, 
-        data=json.dumps(payload),
-        headers={"Content-Type": "application/json"}
-    )
-    print("Sent truncated list to Slack.")
+    try:
+        response = requests.post(
+            SLACK_WEBHOOK_URL, 
+            data=json.dumps(payload),
+            headers={"Content-Type": "application/json"},
+            timeout=15
+        )
+        response.raise_for_status()
+        print("Sent truncated list to Slack.")
+    except Exception as e:
+        print(f"Error sending to Slack: {e}")
 
 if __name__ == "__main__":
     clean_items = fetch_and_filter_steam_data()
