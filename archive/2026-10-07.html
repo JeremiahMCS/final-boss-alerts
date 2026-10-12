@@ -5,22 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steam Top Sellers - Wednesday, October 07, 2026 | Final Boss Alerts</title>
     <meta name="description" content="Daily Steam Top Sellers list for Wednesday, October 07, 2026 tracked by Final Boss Alerts.">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
+    <!-- Fast Preconnect & Async Font Loading to prevent render blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&display=swap"></noscript>
     <style>
         :root {
-            --bg-base: #070b12;
-            --bg-surface: rgba(15, 23, 42, 0.75);
-            --bg-card: rgba(22, 33, 56, 0.65);
-            --bg-card-hover: rgba(30, 48, 80, 0.85);
-            --border: rgba(56, 189, 248, 0.16);
-            --border-hover: rgba(56, 189, 248, 0.45);
+            --bg-base: #090e17;
+            --bg-surface: #10192a;
+            --bg-card: #131e31;
+            --bg-card-hover: #19273f;
+            --border: rgba(56, 189, 248, 0.14);
+            --border-hover: rgba(56, 189, 248, 0.4);
             --primary: #38bdf8;
-            --primary-glow: rgba(56, 189, 248, 0.25);
             --text-main: #f8fafc;
             --text-dim: #94a3b8;
             --text-muted: #64748b;
@@ -38,333 +36,311 @@
         }
 
         body {
-            background-color: var(--bg-base);
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.12) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
-                radial-gradient(at 50% 100%, rgba(15, 23, 42, 0.8) 0px, transparent 50%);
-            background-attachment: fixed;
+            background: #090e17 radial-gradient(circle at 50% 0%, #16243c 0%, #090e17 60%);
             color: var(--text-main);
-            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             min-height: 100vh;
-            padding-bottom: 60px;
+            padding-bottom: 50px;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 960px;
+            max-width: 860px;
             margin: 0 auto;
-            padding: 24px 20px;
+            padding: 20px 16px;
         }
 
         /* Header */
         header {
-            margin-bottom: 24px;
+            margin-bottom: 18px;
         }
 
         .header-top {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
             gap: 12px;
-            padding-bottom: 20px;
+            padding-bottom: 16px;
             border-bottom: 1px solid var(--border);
         }
 
         .brand {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
             text-decoration: none;
         }
 
         .brand-icon {
-            font-size: 32px;
-            background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(99, 102, 241, 0.2));
+            font-size: 24px;
+            background: rgba(56, 189, 248, 0.15);
             border: 1px solid var(--border);
-            border-radius: 14px;
-            width: 52px;
-            height: 52px;
+            border-radius: 10px;
+            width: 42px;
+            height: 42px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .brand-text h1 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 24px;
+            font-family: 'Outfit', -apple-system, sans-serif;
+            font-size: 20px;
             font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(120deg, #ffffff 40%, var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.3px;
+            color: #ffffff;
         }
 
         .brand-text p {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-dim);
             font-weight: 500;
         }
 
-        .header-badges {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .badge-live, .badge-archive {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .badge-live {
             background: rgba(16, 185, 129, 0.15);
             color: #34d399;
             border: 1px solid rgba(16, 185, 129, 0.3);
-            font-size: 12px;
-            font-weight: 700;
-            padding: 6px 12px;
-            border-radius: 20px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
         .badge-archive {
             background: rgba(245, 158, 11, 0.15);
             color: #fbbf24;
             border: 1px solid rgba(245, 158, 11, 0.3);
-            font-size: 12px;
-            font-weight: 700;
-            padding: 6px 12px;
-            border-radius: 20px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
-        /* Control Panel */
+        /* Controls Panel */
         .controls-panel {
             background: var(--bg-surface);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
             border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 18px;
-            margin-bottom: 24px;
+            border-radius: 14px;
+            padding: 14px 16px;
+            margin-bottom: 18px;
             display: flex;
             flex-direction: column;
-            gap: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            gap: 12px;
         }
 
         .nav-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 12px;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
         .nav-buttons {
             display: flex;
             align-items: center;
-            gap: 8px;
-        }
-
-        .nav-btn {
-            background: rgba(30, 41, 59, 0.8);
-            border: 1px solid var(--border);
-            color: var(--text-main);
-            padding: 8px 14px;
-            border-radius: 10px;
-            font-size: 13px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
             gap: 6px;
         }
 
+        .nav-btn {
+            background: #152238;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
         .nav-btn:hover:not(.disabled) {
-            background: rgba(56, 189, 248, 0.2);
+            background: #1e3355;
             border-color: var(--primary);
             color: var(--primary);
-            transform: translateY(-1px);
         }
 
         .nav-btn.disabled {
-            opacity: 0.4;
+            opacity: 0.35;
             cursor: not-allowed;
         }
 
         .nav-btn.today-btn {
-            background: linear-gradient(135deg, rgba(14, 165, 233, 0.25), rgba(99, 102, 241, 0.25));
-            border-color: rgba(56, 189, 248, 0.4);
+            background: rgba(14, 165, 233, 0.2);
+            border-color: rgba(56, 189, 248, 0.35);
             color: #7dd3fc;
         }
 
-        .selector-box {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex: 1;
-            min-width: 250px;
-            max-width: 380px;
-        }
-
         .date-dropdown {
-            width: 100%;
-            background: #0f172a;
+            background: #0d1524;
             color: var(--text-main);
             border: 1px solid var(--border);
-            padding: 9px 14px;
-            border-radius: 10px;
-            font-family: inherit;
-            font-size: 14px;
+            padding: 7px 12px;
+            border-radius: 8px;
+            font-size: 13px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.2s ease;
             outline: none;
+            flex: 1;
+            min-width: 200px;
+            max-width: 320px;
         }
 
-        .date-dropdown:hover, .date-dropdown:focus {
+        .date-dropdown:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px var(--primary-glow);
         }
 
+        /* Tabs & Filter Bar */
         .filter-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 14px;
+            gap: 10px;
             flex-wrap: wrap;
-            padding-top: 12px;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .tabs-group {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tab-btn {
+            background: #142034;
+            border: 1px solid var(--border);
+            color: var(--text-dim);
+            padding: 5px 12px;
+            border-radius: 7px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .tab-btn:hover {
+            color: #ffffff;
+            background: #1b2b46;
+        }
+
+        .tab-btn.active {
+            background: rgba(56, 189, 248, 0.2);
+            border-color: var(--primary);
+            color: #38bdf8;
         }
 
         .search-box {
             flex: 1;
-            min-width: 240px;
+            min-width: 200px;
             position: relative;
         }
 
         .search-input {
             width: 100%;
-            background: rgba(15, 23, 42, 0.9);
+            background: #0d1524;
             border: 1px solid var(--border);
             color: var(--text-main);
-            padding: 10px 14px 10px 38px;
-            border-radius: 10px;
-            font-size: 14px;
+            padding: 7px 12px 7px 32px;
+            border-radius: 8px;
+            font-size: 13px;
             outline: none;
-            transition: all 0.2s ease;
         }
 
         .search-input:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px var(--primary-glow);
         }
 
         .search-icon {
             position: absolute;
-            left: 12px;
+            left: 10px;
             top: 50%;
             transform: translateY(-50%);
             color: var(--text-muted);
             pointer-events: none;
         }
 
-        .current-summary {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-dim);
+        .list-summary {
             display: flex;
             align-items: center;
-            gap: 8px;
-        }
-
-        .count-badge {
-            background: rgba(56, 189, 248, 0.1);
-            color: var(--primary);
-            padding: 4px 10px;
-            border-radius: 12px;
-            border: 1px solid rgba(56, 189, 248, 0.2);
+            justify-content: space-between;
             font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            padding: 0 4px;
         }
 
-        /* Game Cards */
+        /* Game Cards - Compact & Fast */
         .games-list {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
         }
 
         .game-card {
             background: var(--bg-card);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
             border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 14px 18px;
+            border-radius: 10px;
+            padding: 10px 14px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 16px;
-            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            gap: 12px;
+            transition: background 0.15s, border-color 0.15s, transform 0.15s;
         }
 
         .game-card:hover {
             background: var(--bg-card-hover);
             border-color: var(--border-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.4), 0 0 15px -2px var(--primary-glow);
+            transform: translateY(-1px);
+        }
+
+        .game-card.extended-game {
+            display: none; /* Collapsed by default in Top 10 view */
         }
 
         .card-left {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 12px;
             flex: 1;
             min-width: 0;
         }
 
         .rank-badge {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: rgba(30, 41, 59, 0.8);
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: #17243a;
             border: 1px solid var(--border);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Outfit', sans-serif;
-            font-size: 14px;
+            font-family: 'Outfit', -apple-system, sans-serif;
+            font-size: 13px;
             font-weight: 800;
             color: var(--text-dim);
             flex-shrink: 0;
         }
 
         .rank-badge.rank-1 {
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.3), rgba(217, 119, 6, 0.3));
+            background: rgba(245, 158, 11, 0.25);
             border-color: var(--accent-gold);
-            color: #fef08a;
-            box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+            color: #fde047;
         }
 
         .rank-badge.rank-2 {
-            background: linear-gradient(135deg, rgba(203, 213, 225, 0.25), rgba(148, 163, 184, 0.25));
+            background: rgba(203, 213, 225, 0.2);
             border-color: var(--accent-silver);
             color: #ffffff;
-            box-shadow: 0 0 12px rgba(203, 213, 225, 0.2);
         }
 
         .rank-badge.rank-3 {
-            background: linear-gradient(135deg, rgba(234, 88, 12, 0.25), rgba(180, 83, 9, 0.25));
+            background: rgba(234, 88, 12, 0.2);
             border-color: var(--accent-bronze);
             color: #fdba74;
-            box-shadow: 0 0 12px rgba(234, 88, 12, 0.2);
         }
 
         .game-info {
@@ -373,19 +349,17 @@
         }
 
         .game-title {
-            font-family: 'Outfit', sans-serif;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             color: #ffffff;
-            line-height: 1.3;
-            margin-bottom: 3px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            line-height: 1.3;
         }
 
         .rank-label {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--text-muted);
             font-weight: 500;
         }
@@ -393,67 +367,86 @@
         .card-right {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 10px;
             flex-shrink: 0;
         }
 
         .price-pill {
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 13px;
+            padding: 4px 9px;
+            border-radius: 6px;
+            font-size: 12px;
             font-weight: 700;
-            letter-spacing: 0.3px;
             white-space: nowrap;
         }
 
         .price-pill.free {
             background: var(--accent-green-bg);
             color: #34d399;
-            border: 1px solid rgba(16, 185, 129, 0.35);
+            border: 1px solid rgba(16, 185, 129, 0.3);
         }
 
         .price-pill.paid {
-            background: rgba(56, 189, 248, 0.12);
+            background: rgba(56, 189, 248, 0.1);
             color: #7dd3fc;
-            border: 1px solid rgba(56, 189, 248, 0.25);
+            border: 1px solid rgba(56, 189, 248, 0.2);
         }
 
         .store-btn {
-            background: linear-gradient(135deg, #0284c7, #2563eb);
+            background: #0284c7;
             color: #ffffff;
-            padding: 8px 16px;
-            border-radius: 9px;
-            font-size: 13px;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 12px;
             font-weight: 600;
             text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
             white-space: nowrap;
+            transition: background 0.15s;
         }
 
         .store-btn:hover {
-            background: linear-gradient(135deg, #0369a1, #1d4ed8);
-            transform: translateY(-1px);
-            box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
+            background: #0369a1;
         }
 
-        /* Responsive */
-        @media (max-width: 640px) {
+        /* Show More Button */
+        .show-more-box {
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        .show-more-btn {
+            background: #131e31;
+            border: 1px solid var(--border);
+            color: #7dd3fc;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.15s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .show-more-btn:hover {
+            background: #182842;
+            border-color: var(--primary);
+        }
+
+        @media (max-width: 600px) {
             .game-card {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 12px;
-            }
-            .card-right {
-                justify-content: space-between;
+                padding: 10px 12px;
             }
             .game-title {
                 white-space: normal;
+                font-size: 13px;
             }
-            .selector-box {
+            .card-right {
+                gap: 6px;
+            }
+            .date-dropdown {
                 max-width: 100%;
             }
         }
@@ -467,11 +460,11 @@
                     <div class="brand-icon">🏆</div>
                     <div class="brand-text">
                         <h1>FINAL BOSS ALERTS</h1>
-                        <p>Daily Steam Top Sellers Intelligence & Archives</p>
+                        <p>Daily Steam Top Sellers Tracker</p>
                     </div>
                 </a>
                 <div class="header-badges">
-                    <span class="badge-archive">📁 Archive View</span>
+                    <span class="badge-archive">📁 Archive</span>
                 </div>
             </div>
         </header>
@@ -479,13 +472,12 @@
         <section class="controls-panel">
             <div class="nav-row">
                 <div class="nav-buttons">
-                    <a href="2026-10-06.html" class="nav-btn">◀ Previous Day</a>
+                    <a href="2026-10-06.html" class="nav-btn">◀ Prev Day</a>
                     <a href="2026-10-08.html" class="nav-btn">Next Day ▶</a>
                     <a href="../index.html" class="nav-btn today-btn">⚡ Today</a>
                 </div>
-                <div class="selector-box">
-                    <select id="date-select" class="date-dropdown" aria-label="Select archive date">
-                        <option value="../index.html" >Oct 12, 2026 (Mon) — Latest</option>
+                <select id="date-select" class="date-dropdown" aria-label="Select archive date">
+                    <option value="../index.html" >Oct 12, 2026 (Mon) — Latest</option>
 <option value="2026-10-11.html" >Oct 11, 2026 (Sun)</option>
 <option value="2026-10-10.html" >Oct 10, 2026 (Sat)</option>
 <option value="2026-10-09.html" >Oct 09, 2026 (Fri)</option>
@@ -500,564 +492,545 @@
 <option value="2026-09-30.html" >Sep 30, 2026 (Wed)</option>
 <option value="2026-09-29.html" >Sep 29, 2026 (Tue)</option>
 <option value="2026-09-28.html" >Sep 28, 2026 (Mon)</option>
-                    </select>
-                </div>
+                </select>
             </div>
 
             <div class="filter-row">
-                <div class="search-box">
-                    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                    <input type="text" id="search-input" class="search-input" placeholder="Filter games by title..." autocomplete="off">
+                <div class="tabs-group">
+                    <button class="tab-btn active" data-view="top10">🏆 Top 10</button>
+                    <button class="tab-btn" data-view="all">📋 All 30</button>
+                    <button class="tab-btn" data-view="free">🎮 Free Only</button>
                 </div>
-                <div class="current-summary">
-                    <span>Filtered for: <strong>Wednesday, October 07, 2026</strong></span>
-                    <span id="visible-count" class="count-badge">30 Games</span>
+                <div class="search-box">
+                    <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="search-input" class="search-input" placeholder="Search games..." autocomplete="off">
                 </div>
             </div>
         </section>
 
+        <div class="list-summary">
+            <span>Filtered list for: <strong style="color: #f1f5f9;">Wednesday, October 07, 2026</strong></span>
+            <span id="count-badge">Showing Top 10</span>
+        </div>
+
         <main class="games-list" id="games-container">
             
-        <div class="game-card" data-title="Dota 2">
+        <div class="game-card" data-rank="1" data-free="true" data-title="Dota 2">
             <div class="card-left">
                 <div class="rank-badge rank-1">👑 #1</div>
                 <div class="game-info">
                     <h2 class="game-title">Dota 2</h2>
-                    <span class="rank-label">Steam Top Seller Rank #1</span>
+                    <span class="rank-label">Top Seller #1</span>
                 </div>
             </div>
             <div class="card-right">
-                <span class="price-pill free">FREE TO PLAY</span>
-                <a href="https://store.steampowered.com/app/570/Dota_2/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span class="price-pill free">FREE</span>
+                <a href="https://store.steampowered.com/app/570/Dota_2/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Dota 2 on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Gears of War: E-Day">
+        <div class="game-card" data-rank="2" data-free="false" data-title="Gears of War: E-Day">
             <div class="card-left">
                 <div class="rank-badge rank-2">🥈 #2</div>
                 <div class="game-info">
                     <h2 class="game-title">Gears of War: E-Day</h2>
-                    <span class="rank-label">Steam Top Seller Rank #2</span>
+                    <span class="rank-label">Top Seller #2</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$69.99</span>
-                <a href="https://store.steampowered.com/app/3010850/Gears_of_War_EDay/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/3010850/Gears_of_War_EDay/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Gears of War: E-Day on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="STAR WARS: Galactic Racer™">
+        <div class="game-card" data-rank="3" data-free="false" data-title="STAR WARS: Galactic Racer™">
             <div class="card-left">
                 <div class="rank-badge rank-3">🥉 #3</div>
                 <div class="game-info">
                     <h2 class="game-title">STAR WARS: Galactic Racer™</h2>
-                    <span class="rank-label">Steam Top Seller Rank #3</span>
+                    <span class="rank-label">Top Seller #3</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$59.99</span>
-                <a href="https://store.steampowered.com/app/4078430/STAR_WARS_Galactic_Racer/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/4078430/STAR_WARS_Galactic_Racer/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View STAR WARS: Galactic Racer™ on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="AION 2">
+        <div class="game-card" data-rank="4" data-free="true" data-title="AION 2">
             <div class="card-left">
                 <div class="rank-badge">#4</div>
                 <div class="game-info">
                     <h2 class="game-title">AION 2</h2>
-                    <span class="rank-label">Steam Top Seller Rank #4</span>
+                    <span class="rank-label">Top Seller #4</span>
                 </div>
             </div>
             <div class="card-right">
-                <span class="price-pill free">FREE TO PLAY</span>
-                <a href="https://store.steampowered.com/app/3393110/AION_2/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span class="price-pill free">FREE</span>
+                <a href="https://store.steampowered.com/app/3393110/AION_2/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View AION 2 on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Dead by Daylight">
+        <div class="game-card" data-rank="5" data-free="false" data-title="Dead by Daylight">
             <div class="card-left">
                 <div class="rank-badge">#5</div>
                 <div class="game-info">
                     <h2 class="game-title">Dead by Daylight</h2>
-                    <span class="rank-label">Steam Top Seller Rank #5</span>
+                    <span class="rank-label">Top Seller #5</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$7.99</span>
-                <a href="https://store.steampowered.com/app/381210/Dead_by_Daylight/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/381210/Dead_by_Daylight/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Dead by Daylight on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="MapleStory">
+        <div class="game-card" data-rank="6" data-free="true" data-title="MapleStory">
             <div class="card-left">
                 <div class="rank-badge">#6</div>
                 <div class="game-info">
                     <h2 class="game-title">MapleStory</h2>
-                    <span class="rank-label">Steam Top Seller Rank #6</span>
+                    <span class="rank-label">Top Seller #6</span>
                 </div>
             </div>
             <div class="card-right">
-                <span class="price-pill free">FREE TO PLAY</span>
-                <a href="https://store.steampowered.com/app/216150/MapleStory/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span class="price-pill free">FREE</span>
+                <a href="https://store.steampowered.com/app/216150/MapleStory/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View MapleStory on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Dressmaker">
+        <div class="game-card" data-rank="7" data-free="false" data-title="Dressmaker">
             <div class="card-left">
                 <div class="rank-badge">#7</div>
                 <div class="game-info">
                     <h2 class="game-title">Dressmaker</h2>
-                    <span class="rank-label">Steam Top Seller Rank #7</span>
+                    <span class="rank-label">Top Seller #7</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$14.99</span>
-                <a href="https://store.steampowered.com/app/4019220/Dressmaker/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/4019220/Dressmaker/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Dressmaker on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="WARDOGS">
+        <div class="game-card" data-rank="8" data-free="false" data-title="WARDOGS">
             <div class="card-left">
                 <div class="rank-badge">#8</div>
                 <div class="game-info">
                     <h2 class="game-title">WARDOGS</h2>
-                    <span class="rank-label">Steam Top Seller Rank #8</span>
+                    <span class="rank-label">Top Seller #8</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$39.99</span>
-                <a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/1867240/WARDOGS/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View WARDOGS on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Cyberpunk 2077">
+        <div class="game-card" data-rank="9" data-free="false" data-title="Cyberpunk 2077">
             <div class="card-left">
                 <div class="rank-badge">#9</div>
                 <div class="game-info">
                     <h2 class="game-title">Cyberpunk 2077</h2>
-                    <span class="rank-label">Steam Top Seller Rank #9</span>
+                    <span class="rank-label">Top Seller #9</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$17.99</span>
-                <a href="https://store.steampowered.com/app/1091500/Cyberpunk_2077/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/1091500/Cyberpunk_2077/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Cyberpunk 2077 on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="MechWarrior 5: Mercenaries">
+        <div class="game-card" data-rank="10" data-free="false" data-title="MechWarrior 5: Mercenaries">
             <div class="card-left">
                 <div class="rank-badge">#10</div>
                 <div class="game-info">
                     <h2 class="game-title">MechWarrior 5: Mercenaries</h2>
-                    <span class="rank-label">Steam Top Seller Rank #10</span>
+                    <span class="rank-label">Top Seller #10</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$7.49</span>
-                <a href="https://store.steampowered.com/app/784080/MechWarrior_5_Mercenaries/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/784080/MechWarrior_5_Mercenaries/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View MechWarrior 5: Mercenaries on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="ACE COMBAT 8: WINGS OF THEVE">
+        <div class="game-card extended-game" data-rank="11" data-free="false" data-title="ACE COMBAT 8: WINGS OF THEVE">
             <div class="card-left">
                 <div class="rank-badge">#11</div>
                 <div class="game-info">
                     <h2 class="game-title">ACE COMBAT 8: WINGS OF THEVE</h2>
-                    <span class="rank-label">Steam Top Seller Rank #11</span>
+                    <span class="rank-label">Top Seller #11</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$69.99</span>
-                <a href="https://store.steampowered.com/app/2288340/ACE_COMBAT_8_WINGS_OF_THEVE/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/2288340/ACE_COMBAT_8_WINGS_OF_THEVE/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View ACE COMBAT 8: WINGS OF THEVE on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Warframe">
+        <div class="game-card extended-game" data-rank="12" data-free="true" data-title="Warframe">
             <div class="card-left">
                 <div class="rank-badge">#12</div>
                 <div class="game-info">
                     <h2 class="game-title">Warframe</h2>
-                    <span class="rank-label">Steam Top Seller Rank #12</span>
+                    <span class="rank-label">Top Seller #12</span>
                 </div>
             </div>
             <div class="card-right">
-                <span class="price-pill free">FREE TO PLAY</span>
-                <a href="https://store.steampowered.com/app/230410/Warframe/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span class="price-pill free">FREE</span>
+                <a href="https://store.steampowered.com/app/230410/Warframe/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Warframe on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Wuthering Waves">
+        <div class="game-card extended-game" data-rank="13" data-free="true" data-title="Wuthering Waves">
             <div class="card-left">
                 <div class="rank-badge">#13</div>
                 <div class="game-info">
                     <h2 class="game-title">Wuthering Waves</h2>
-                    <span class="rank-label">Steam Top Seller Rank #13</span>
+                    <span class="rank-label">Top Seller #13</span>
                 </div>
             </div>
             <div class="card-right">
-                <span class="price-pill free">FREE TO PLAY</span>
-                <a href="https://store.steampowered.com/app/3513350/Wuthering_Waves/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span class="price-pill free">FREE</span>
+                <a href="https://store.steampowered.com/app/3513350/Wuthering_Waves/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Wuthering Waves on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Warhammer 40,000: Space Marine 2">
+        <div class="game-card extended-game" data-rank="14" data-free="false" data-title="Warhammer 40,000: Space Marine 2">
             <div class="card-left">
                 <div class="rank-badge">#14</div>
                 <div class="game-info">
                     <h2 class="game-title">Warhammer 40,000: Space Marine 2</h2>
-                    <span class="rank-label">Steam Top Seller Rank #14</span>
+                    <span class="rank-label">Top Seller #14</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$14.99</span>
-                <a href="https://store.steampowered.com/app/2183900/Warhammer_40000_Space_Marine_2/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/2183900/Warhammer_40000_Space_Marine_2/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Warhammer 40,000: Space Marine 2 on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Aniimo">
+        <div class="game-card extended-game" data-rank="15" data-free="true" data-title="Aniimo">
             <div class="card-left">
                 <div class="rank-badge">#15</div>
                 <div class="game-info">
                     <h2 class="game-title">Aniimo</h2>
-                    <span class="rank-label">Steam Top Seller Rank #15</span>
+                    <span class="rank-label">Top Seller #15</span>
                 </div>
             </div>
             <div class="card-right">
-                <span class="price-pill free">FREE TO PLAY</span>
-                <a href="https://store.steampowered.com/app/4126040/Aniimo/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span class="price-pill free">FREE</span>
+                <a href="https://store.steampowered.com/app/4126040/Aniimo/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Aniimo on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="MechWarrior 5: Mercenaries - Ashes and Ascension">
+        <div class="game-card extended-game" data-rank="16" data-free="false" data-title="MechWarrior 5: Mercenaries - Ashes and Ascension">
             <div class="card-left">
                 <div class="rank-badge">#16</div>
                 <div class="game-info">
                     <h2 class="game-title">MechWarrior 5: Mercenaries - Ashes and Ascension</h2>
-                    <span class="rank-label">Steam Top Seller Rank #16</span>
+                    <span class="rank-label">Top Seller #16</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$19.99</span>
-                <a href="https://store.steampowered.com/app/4849350/MechWarrior_5_Mercenaries__Ashes_and_Ascension/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/4849350/MechWarrior_5_Mercenaries__Ashes_and_Ascension/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View MechWarrior 5: Mercenaries - Ashes and Ascension on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Dragon&#x27;s Dogma 2">
+        <div class="game-card extended-game" data-rank="17" data-free="false" data-title="Dragon&#x27;s Dogma 2">
             <div class="card-left">
                 <div class="rank-badge">#17</div>
                 <div class="game-info">
                     <h2 class="game-title">Dragon&#x27;s Dogma 2</h2>
-                    <span class="rank-label">Steam Top Seller Rank #17</span>
+                    <span class="rank-label">Top Seller #17</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$39.99</span>
-                <a href="https://store.steampowered.com/app/2054970/Dragons_Dogma_2/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/2054970/Dragons_Dogma_2/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Dragon&#x27;s Dogma 2 on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Baldur&#x27;s Gate 3">
+        <div class="game-card extended-game" data-rank="18" data-free="false" data-title="Baldur&#x27;s Gate 3">
             <div class="card-left">
                 <div class="rank-badge">#18</div>
                 <div class="game-info">
                     <h2 class="game-title">Baldur&#x27;s Gate 3</h2>
-                    <span class="rank-label">Steam Top Seller Rank #18</span>
+                    <span class="rank-label">Top Seller #18</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$41.99</span>
-                <a href="https://store.steampowered.com/app/1086940/Baldurs_Gate_3/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/1086940/Baldurs_Gate_3/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Baldur&#x27;s Gate 3 on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="HELLDIVERS™ 2">
+        <div class="game-card extended-game" data-rank="19" data-free="false" data-title="HELLDIVERS™ 2">
             <div class="card-left">
                 <div class="rank-badge">#19</div>
                 <div class="game-info">
                     <h2 class="game-title">HELLDIVERS™ 2</h2>
-                    <span class="rank-label">Steam Top Seller Rank #19</span>
+                    <span class="rank-label">Top Seller #19</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$29.99</span>
-                <a href="https://store.steampowered.com/app/553850/HELLDIVERS_2/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/553850/HELLDIVERS_2/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View HELLDIVERS™ 2 on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Apex Legends™">
+        <div class="game-card extended-game" data-rank="20" data-free="true" data-title="Apex Legends™">
             <div class="card-left">
                 <div class="rank-badge">#20</div>
                 <div class="game-info">
                     <h2 class="game-title">Apex Legends™</h2>
-                    <span class="rank-label">Steam Top Seller Rank #20</span>
+                    <span class="rank-label">Top Seller #20</span>
                 </div>
             </div>
             <div class="card-right">
-                <span class="price-pill free">FREE TO PLAY</span>
-                <a href="https://store.steampowered.com/app/1172470/Apex_Legends/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span class="price-pill free">FREE</span>
+                <a href="https://store.steampowered.com/app/1172470/Apex_Legends/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Apex Legends™ on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Clive Barker&#x27;s Hellraiser: Revival">
+        <div class="game-card extended-game" data-rank="21" data-free="false" data-title="Clive Barker&#x27;s Hellraiser: Revival">
             <div class="card-left">
                 <div class="rank-badge">#21</div>
                 <div class="game-info">
                     <h2 class="game-title">Clive Barker&#x27;s Hellraiser: Revival</h2>
-                    <span class="rank-label">Steam Top Seller Rank #21</span>
+                    <span class="rank-label">Top Seller #21</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$39.99</span>
-                <a href="https://store.steampowered.com/app/1551980/Clive_Barkers_Hellraiser_Revival/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/1551980/Clive_Barkers_Hellraiser_Revival/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Clive Barker&#x27;s Hellraiser: Revival on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="EA SPORTS FC™ 27">
+        <div class="game-card extended-game" data-rank="22" data-free="false" data-title="EA SPORTS FC™ 27">
             <div class="card-left">
                 <div class="rank-badge">#22</div>
                 <div class="game-info">
                     <h2 class="game-title">EA SPORTS FC™ 27</h2>
-                    <span class="rank-label">Steam Top Seller Rank #22</span>
+                    <span class="rank-label">Top Seller #22</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$69.99</span>
-                <a href="https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View EA SPORTS FC™ 27 on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="The Outlast Trials">
+        <div class="game-card extended-game" data-rank="23" data-free="false" data-title="The Outlast Trials">
             <div class="card-left">
                 <div class="rank-badge">#23</div>
                 <div class="game-info">
                     <h2 class="game-title">The Outlast Trials</h2>
-                    <span class="rank-label">Steam Top Seller Rank #23</span>
+                    <span class="rank-label">Top Seller #23</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$3.99</span>
-                <a href="https://store.steampowered.com/app/1304930/The_Outlast_Trials/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/1304930/The_Outlast_Trials/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View The Outlast Trials on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Dragon&#x27;s Dogma 2: Dark Arisen Expansion">
+        <div class="game-card extended-game" data-rank="24" data-free="false" data-title="Dragon&#x27;s Dogma 2: Dark Arisen Expansion">
             <div class="card-left">
                 <div class="rank-badge">#24</div>
                 <div class="game-info">
                     <h2 class="game-title">Dragon&#x27;s Dogma 2: Dark Arisen Expansion</h2>
-                    <span class="rank-label">Steam Top Seller Rank #24</span>
+                    <span class="rank-label">Top Seller #24</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$29.99</span>
-                <a href="https://store.steampowered.com/app/2593290/Dragons_Dogma_2_Dark_Arisen_Expansion/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/2593290/Dragons_Dogma_2_Dark_Arisen_Expansion/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Dragon&#x27;s Dogma 2: Dark Arisen Expansion on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Bodycam">
+        <div class="game-card extended-game" data-rank="25" data-free="false" data-title="Bodycam">
             <div class="card-left">
                 <div class="rank-badge">#25</div>
                 <div class="game-info">
                     <h2 class="game-title">Bodycam</h2>
-                    <span class="rank-label">Steam Top Seller Rank #25</span>
+                    <span class="rank-label">Top Seller #25</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$26.65</span>
-                <a href="https://store.steampowered.com/app/2406770/Bodycam/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/2406770/Bodycam/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Bodycam on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Red Dead Redemption 2">
+        <div class="game-card extended-game" data-rank="26" data-free="false" data-title="Red Dead Redemption 2">
             <div class="card-left">
                 <div class="rank-badge">#26</div>
                 <div class="game-info">
                     <h2 class="game-title">Red Dead Redemption 2</h2>
-                    <span class="rank-label">Steam Top Seller Rank #26</span>
+                    <span class="rank-label">Top Seller #26</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$14.99</span>
-                <a href="https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Red Dead Redemption 2 on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Resident Evil Requiem">
+        <div class="game-card extended-game" data-rank="27" data-free="false" data-title="Resident Evil Requiem">
             <div class="card-left">
                 <div class="rank-badge">#27</div>
                 <div class="game-info">
                     <h2 class="game-title">Resident Evil Requiem</h2>
-                    <span class="rank-label">Steam Top Seller Rank #27</span>
+                    <span class="rank-label">Top Seller #27</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$48.99</span>
-                <a href="https://store.steampowered.com/app/3764200/Resident_Evil_Requiem/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/3764200/Resident_Evil_Requiem/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Resident Evil Requiem on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Call of Duty®: Modern Warfare® 4">
+        <div class="game-card extended-game" data-rank="28" data-free="false" data-title="Call of Duty®: Modern Warfare® 4">
             <div class="card-left">
                 <div class="rank-badge">#28</div>
                 <div class="game-info">
                     <h2 class="game-title">Call of Duty®: Modern Warfare® 4</h2>
-                    <span class="rank-label">Steam Top Seller Rank #28</span>
+                    <span class="rank-label">Top Seller #28</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$69.99</span>
-                <a href="https://store.steampowered.com/app/4435490/Call_of_Duty_Modern_Warfare_4/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/4435490/Call_of_Duty_Modern_Warfare_4/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Call of Duty®: Modern Warfare® 4 on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="Project Zomboid">
+        <div class="game-card extended-game" data-rank="29" data-free="false" data-title="Project Zomboid">
             <div class="card-left">
                 <div class="rank-badge">#29</div>
                 <div class="game-info">
                     <h2 class="game-title">Project Zomboid</h2>
-                    <span class="rank-label">Steam Top Seller Rank #29</span>
+                    <span class="rank-label">Top Seller #29</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$16.74</span>
-                <a href="https://store.steampowered.com/app/108600/Project_Zomboid/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/108600/Project_Zomboid/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View Project Zomboid on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
 
-        <div class="game-card" data-title="The Elder Scrolls V: Skyrim Special Edition">
+        <div class="game-card extended-game" data-rank="30" data-free="false" data-title="The Elder Scrolls V: Skyrim Special Edition">
             <div class="card-left">
                 <div class="rank-badge">#30</div>
                 <div class="game-info">
                     <h2 class="game-title">The Elder Scrolls V: Skyrim Special Edition</h2>
-                    <span class="rank-label">Steam Top Seller Rank #30</span>
+                    <span class="rank-label">Top Seller #30</span>
                 </div>
             </div>
             <div class="card-right">
                 <span class="price-pill paid">$3.99</span>
-                <a href="https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/" target="_blank" rel="noopener noreferrer" class="store-btn" title="View The Elder Scrolls V: Skyrim Special Edition on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         
         </main>
+
+        <div class="show-more-box" id="show-more-box">
+            <button class="show-more-btn" id="show-more-btn">
+                <span>▼ Show Remaining 20 Games (Ranks 11–30)</span>
+            </button>
+        </div>
     </div>
 
     <script>
@@ -1065,33 +1038,93 @@
         const dateSelect = document.getElementById('date-select');
         if (dateSelect) {
             dateSelect.addEventListener('change', (e) => {
-                if (e.target.value) {
-                    window.location.href = e.target.value;
-                }
+                if (e.target.value) window.location.href = e.target.value;
             });
         }
 
-        // Realtime Search Filter
-        const searchInput = document.getElementById('search-input');
+        // Tabs & Filtering
+        let currentView = 'top10';
+        const tabBtns = document.querySelectorAll('.tab-btn');
         const gameCards = document.querySelectorAll('.game-card');
-        const countDisplay = document.getElementById('visible-count');
+        const showMoreBox = document.getElementById('show-more-box');
+        const showMoreBtn = document.getElementById('show-more-btn');
+        const searchInput = document.getElementById('search-input');
+        const countBadge = document.getElementById('count-badge');
+
+        function updateDisplay() {
+            const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+            let visible = 0;
+
+            gameCards.forEach(card => {
+                const rank = parseInt(card.getAttribute('data-rank') || '0', 10);
+                const isFree = card.getAttribute('data-free') === 'true';
+                const title = (card.getAttribute('data-title') || '').toLowerCase();
+
+                let matchesFilter = true;
+                if (query) {
+                    matchesFilter = title.includes(query);
+                } else {
+                    if (currentView === 'top10') {
+                        matchesFilter = (rank <= 10);
+                    } else if (currentView === 'free') {
+                        matchesFilter = isFree;
+                    } else if (currentView === 'all') {
+                        matchesFilter = true;
+                    }
+                }
+
+                if (matchesFilter) {
+                    card.style.display = 'flex';
+                    visible++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (showMoreBox) {
+                if (currentView === 'top10' && !query) {
+                    showMoreBox.style.display = 'block';
+                } else {
+                    showMoreBox.style.display = 'none';
+                }
+            }
+
+            if (countBadge) {
+                if (query) {
+                    countBadge.textContent = visible + ' matching games';
+                } else if (currentView === 'top10') {
+                    countBadge.textContent = 'Showing Top 10 of 30';
+                } else if (currentView === 'free') {
+                    countBadge.textContent = visible + ' Free to Play games';
+                } else {
+                    countBadge.textContent = 'Showing all 30 games';
+                }
+            }
+        }
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentView = btn.getAttribute('data-view');
+                if (searchInput) searchInput.value = '';
+                updateDisplay();
+            });
+        });
+
+        if (showMoreBtn) {
+            showMoreBtn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                const allBtn = document.querySelector('.tab-btn[data-view="all"]');
+                if (allBtn) allBtn.classList.add('active');
+                currentView = 'all';
+                updateDisplay();
+            });
+        }
 
         if (searchInput) {
-            searchInput.addEventListener('input', (e) => {
-                const query = e.target.value.toLowerCase().trim();
-                let count = 0;
-                gameCards.forEach(card => {
-                    const title = (card.getAttribute('data-title') || '').toLowerCase();
-                    if (title.includes(query)) {
-                        card.style.display = '';
-                        count++;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-                if (countDisplay) {
-                    countDisplay.textContent = count + ' of ' + gameCards.length + ' Games';
-                }
+            searchInput.addEventListener('input', () => {
+                updateDisplay();
             });
         }
 
@@ -1099,8 +1132,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const reqDate = urlParams.get('date');
         if (reqDate && reqDate !== '2026-10-07') {
-            const target = '../archive/' + reqDate + '.html';
-            window.location.replace(target);
+            window.location.replace('../archive/' + reqDate + '.html');
         }
 
         // Keyboard navigation ([ for Prev, ] for Next)

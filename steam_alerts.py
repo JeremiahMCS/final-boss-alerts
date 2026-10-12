@@ -101,7 +101,7 @@ def fetch_and_filter_steam_data():
         return []
 
 def generate_page_html(date_str, items, all_dates, is_root=False):
-    """Generates a complete, premium HTML page for a specific date with archive navigation."""
+    """Generates an ultra-fast, compact HTML page with Top 10 default view, tabs, and archive navigation."""
     base_path = '' if is_root else '../'
     
     try:
@@ -116,6 +116,7 @@ def generate_page_html(date_str, items, all_dates, is_root=False):
     latest_date = all_dates[0] if all_dates else date_str
     is_latest = (date_str == latest_date)
     
+    # Dropdown options
     options_html = []
     for d in all_dates:
         try:
@@ -140,9 +141,9 @@ def generate_page_html(date_str, items, all_dates, is_root=False):
     
     if prev_date:
         prev_link = f'{prev_date}.html' if not is_root else f'archive/{prev_date}.html'
-        prev_btn = f'<a href="{prev_link}" class="nav-btn">◀ Previous Day</a>'
+        prev_btn = f'<a href="{prev_link}" class="nav-btn">◀ Prev Day</a>'
     else:
-        prev_btn = '<span class="nav-btn disabled">◀ Previous Day</span>'
+        prev_btn = '<span class="nav-btn disabled">◀ Prev Day</span>'
         
     if next_date:
         next_link = (f'../index.html' if next_date == latest_date else f'{next_date}.html') if not is_root else (f'index.html' if next_date == latest_date else f'archive/{next_date}.html')
@@ -156,7 +157,8 @@ def generate_page_html(date_str, items, all_dates, is_root=False):
         name = html.escape(item.get('name', 'Unknown'))
         price = html.escape(item.get('price', 'Unknown'))
         url = html.escape(item.get('url', '#'))
-        
+        is_free = 'free' in price.lower()
+            
         rank_class = 'rank-badge'
         rank_icon = ''
         if rank == 1:
@@ -169,30 +171,29 @@ def generate_page_html(date_str, items, all_dates, is_root=False):
             rank_class += ' rank-3'
             rank_icon = '🥉 '
             
-        is_free = 'free' in price.lower()
-        price_badge = f'<span class="price-pill free">FREE TO PLAY</span>' if is_free else f'<span class="price-pill paid">{price}</span>'
+        price_badge = f'<span class="price-pill free">FREE</span>' if is_free else f'<span class="price-pill paid">{price}</span>'
+        is_extended = ' extended-game' if rank > 10 else ''
         
         cards_html.append(f'''
-        <div class="game-card" data-title="{name}">
+        <div class="game-card{is_extended}" data-rank="{rank}" data-free="{'true' if is_free else 'false'}" data-title="{name}">
             <div class="card-left">
                 <div class="{rank_class}">{rank_icon}#{rank}</div>
                 <div class="game-info">
                     <h2 class="game-title">{name}</h2>
-                    <span class="rank-label">Steam Top Seller Rank #{rank}</span>
+                    <span class="rank-label">Top Seller #{rank}</span>
                 </div>
             </div>
             <div class="card-right">
                 {price_badge}
-                <a href="{url}" target="_blank" rel="noopener noreferrer" class="store-btn">
-                    View on Steam
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <a href="{url}" target="_blank" rel="noopener noreferrer" class="store-btn" title="View {name} on Steam">
+                    Store ↗
                 </a>
             </div>
         </div>
         ''')
         
     cards_markup = '\n'.join(cards_html)
-    status_badge = '<span class="badge-live">● Latest Sync</span>' if is_latest else '<span class="badge-archive">📁 Archive View</span>'
+    status_badge = '<span class="badge-live">● Latest</span>' if is_latest else '<span class="badge-archive">📁 Archive</span>'
     
     html_content = f'''<!DOCTYPE html>
 <html lang="en">
@@ -201,22 +202,20 @@ def generate_page_html(date_str, items, all_dates, is_root=False):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steam Top Sellers - {formatted_date} | Final Boss Alerts</title>
     <meta name="description" content="Daily Steam Top Sellers list for {formatted_date} tracked by Final Boss Alerts.">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
+    <!-- Fast Preconnect & Async Font Loading to prevent render blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&display=swap"></noscript>
     <style>
         :root {{
-            --bg-base: #070b12;
-            --bg-surface: rgba(15, 23, 42, 0.75);
-            --bg-card: rgba(22, 33, 56, 0.65);
-            --bg-card-hover: rgba(30, 48, 80, 0.85);
-            --border: rgba(56, 189, 248, 0.16);
-            --border-hover: rgba(56, 189, 248, 0.45);
+            --bg-base: #090e17;
+            --bg-surface: #10192a;
+            --bg-card: #131e31;
+            --bg-card-hover: #19273f;
+            --border: rgba(56, 189, 248, 0.14);
+            --border-hover: rgba(56, 189, 248, 0.4);
             --primary: #38bdf8;
-            --primary-glow: rgba(56, 189, 248, 0.25);
             --text-main: #f8fafc;
             --text-dim: #94a3b8;
             --text-muted: #64748b;
@@ -234,333 +233,311 @@ def generate_page_html(date_str, items, all_dates, is_root=False):
         }}
 
         body {{
-            background-color: var(--bg-base);
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.12) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
-                radial-gradient(at 50% 100%, rgba(15, 23, 42, 0.8) 0px, transparent 50%);
-            background-attachment: fixed;
+            background: #090e17 radial-gradient(circle at 50% 0%, #16243c 0%, #090e17 60%);
             color: var(--text-main);
-            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             min-height: 100vh;
-            padding-bottom: 60px;
+            padding-bottom: 50px;
+            -webkit-font-smoothing: antialiased;
         }}
 
         .container {{
-            max-width: 960px;
+            max-width: 860px;
             margin: 0 auto;
-            padding: 24px 20px;
+            padding: 20px 16px;
         }}
 
         /* Header */
         header {{
-            margin-bottom: 24px;
+            margin-bottom: 18px;
         }}
 
         .header-top {{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
             gap: 12px;
-            padding-bottom: 20px;
+            padding-bottom: 16px;
             border-bottom: 1px solid var(--border);
         }}
 
         .brand {{
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
             text-decoration: none;
         }}
 
         .brand-icon {{
-            font-size: 32px;
-            background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(99, 102, 241, 0.2));
+            font-size: 24px;
+            background: rgba(56, 189, 248, 0.15);
             border: 1px solid var(--border);
-            border-radius: 14px;
-            width: 52px;
-            height: 52px;
+            border-radius: 10px;
+            width: 42px;
+            height: 42px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }}
 
         .brand-text h1 {{
-            font-family: 'Outfit', sans-serif;
-            font-size: 24px;
+            font-family: 'Outfit', -apple-system, sans-serif;
+            font-size: 20px;
             font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(120deg, #ffffff 40%, var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.3px;
+            color: #ffffff;
         }}
 
         .brand-text p {{
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-dim);
             font-weight: 500;
         }}
 
-        .header-badges {{
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .badge-live, .badge-archive {{
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }}
 
         .badge-live {{
             background: rgba(16, 185, 129, 0.15);
             color: #34d399;
             border: 1px solid rgba(16, 185, 129, 0.3);
-            font-size: 12px;
-            font-weight: 700;
-            padding: 6px 12px;
-            border-radius: 20px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }}
 
         .badge-archive {{
             background: rgba(245, 158, 11, 0.15);
             color: #fbbf24;
             border: 1px solid rgba(245, 158, 11, 0.3);
-            font-size: 12px;
-            font-weight: 700;
-            padding: 6px 12px;
-            border-radius: 20px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }}
 
-        /* Control Panel */
+        /* Controls Panel */
         .controls-panel {{
             background: var(--bg-surface);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
             border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 18px;
-            margin-bottom: 24px;
+            border-radius: 14px;
+            padding: 14px 16px;
+            margin-bottom: 18px;
             display: flex;
             flex-direction: column;
-            gap: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            gap: 12px;
         }}
 
         .nav-row {{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 12px;
+            gap: 10px;
             flex-wrap: wrap;
         }}
 
         .nav-buttons {{
             display: flex;
             align-items: center;
-            gap: 8px;
-        }}
-
-        .nav-btn {{
-            background: rgba(30, 41, 59, 0.8);
-            border: 1px solid var(--border);
-            color: var(--text-main);
-            padding: 8px 14px;
-            border-radius: 10px;
-            font-size: 13px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
             gap: 6px;
         }}
 
+        .nav-btn {{
+            background: #152238;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.15s, border-color 0.15s;
+        }}
+
         .nav-btn:hover:not(.disabled) {{
-            background: rgba(56, 189, 248, 0.2);
+            background: #1e3355;
             border-color: var(--primary);
             color: var(--primary);
-            transform: translateY(-1px);
         }}
 
         .nav-btn.disabled {{
-            opacity: 0.4;
+            opacity: 0.35;
             cursor: not-allowed;
         }}
 
         .nav-btn.today-btn {{
-            background: linear-gradient(135deg, rgba(14, 165, 233, 0.25), rgba(99, 102, 241, 0.25));
-            border-color: rgba(56, 189, 248, 0.4);
+            background: rgba(14, 165, 233, 0.2);
+            border-color: rgba(56, 189, 248, 0.35);
             color: #7dd3fc;
         }}
 
-        .selector-box {{
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex: 1;
-            min-width: 250px;
-            max-width: 380px;
-        }}
-
         .date-dropdown {{
-            width: 100%;
-            background: #0f172a;
+            background: #0d1524;
             color: var(--text-main);
             border: 1px solid var(--border);
-            padding: 9px 14px;
-            border-radius: 10px;
-            font-family: inherit;
-            font-size: 14px;
+            padding: 7px 12px;
+            border-radius: 8px;
+            font-size: 13px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.2s ease;
             outline: none;
+            flex: 1;
+            min-width: 200px;
+            max-width: 320px;
         }}
 
-        .date-dropdown:hover, .date-dropdown:focus {{
+        .date-dropdown:focus {{
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px var(--primary-glow);
         }}
 
+        /* Tabs & Filter Bar */
         .filter-row {{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 14px;
+            gap: 10px;
             flex-wrap: wrap;
-            padding-top: 12px;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }}
+
+        .tabs-group {{
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }}
+
+        .tab-btn {{
+            background: #142034;
+            border: 1px solid var(--border);
+            color: var(--text-dim);
+            padding: 5px 12px;
+            border-radius: 7px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s;
+        }}
+
+        .tab-btn:hover {{
+            color: #ffffff;
+            background: #1b2b46;
+        }}
+
+        .tab-btn.active {{
+            background: rgba(56, 189, 248, 0.2);
+            border-color: var(--primary);
+            color: #38bdf8;
         }}
 
         .search-box {{
             flex: 1;
-            min-width: 240px;
+            min-width: 200px;
             position: relative;
         }}
 
         .search-input {{
             width: 100%;
-            background: rgba(15, 23, 42, 0.9);
+            background: #0d1524;
             border: 1px solid var(--border);
             color: var(--text-main);
-            padding: 10px 14px 10px 38px;
-            border-radius: 10px;
-            font-size: 14px;
+            padding: 7px 12px 7px 32px;
+            border-radius: 8px;
+            font-size: 13px;
             outline: none;
-            transition: all 0.2s ease;
         }}
 
         .search-input:focus {{
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px var(--primary-glow);
         }}
 
         .search-icon {{
             position: absolute;
-            left: 12px;
+            left: 10px;
             top: 50%;
             transform: translateY(-50%);
             color: var(--text-muted);
             pointer-events: none;
         }}
 
-        .current-summary {{
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-dim);
+        .list-summary {{
             display: flex;
             align-items: center;
-            gap: 8px;
-        }}
-
-        .count-badge {{
-            background: rgba(56, 189, 248, 0.1);
-            color: var(--primary);
-            padding: 4px 10px;
-            border-radius: 12px;
-            border: 1px solid rgba(56, 189, 248, 0.2);
+            justify-content: space-between;
             font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            padding: 0 4px;
         }}
 
-        /* Game Cards */
+        /* Game Cards - Compact & Fast */
         .games-list {{
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
         }}
 
         .game-card {{
             background: var(--bg-card);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
             border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 14px 18px;
+            border-radius: 10px;
+            padding: 10px 14px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 16px;
-            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            gap: 12px;
+            transition: background 0.15s, border-color 0.15s, transform 0.15s;
         }}
 
         .game-card:hover {{
             background: var(--bg-card-hover);
             border-color: var(--border-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.4), 0 0 15px -2px var(--primary-glow);
+            transform: translateY(-1px);
+        }}
+
+        .game-card.extended-game {{
+            display: none; /* Collapsed by default in Top 10 view */
         }}
 
         .card-left {{
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 12px;
             flex: 1;
             min-width: 0;
         }}
 
         .rank-badge {{
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: rgba(30, 41, 59, 0.8);
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: #17243a;
             border: 1px solid var(--border);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Outfit', sans-serif;
-            font-size: 14px;
+            font-family: 'Outfit', -apple-system, sans-serif;
+            font-size: 13px;
             font-weight: 800;
             color: var(--text-dim);
             flex-shrink: 0;
         }}
 
         .rank-badge.rank-1 {{
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.3), rgba(217, 119, 6, 0.3));
+            background: rgba(245, 158, 11, 0.25);
             border-color: var(--accent-gold);
-            color: #fef08a;
-            box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+            color: #fde047;
         }}
 
         .rank-badge.rank-2 {{
-            background: linear-gradient(135deg, rgba(203, 213, 225, 0.25), rgba(148, 163, 184, 0.25));
+            background: rgba(203, 213, 225, 0.2);
             border-color: var(--accent-silver);
             color: #ffffff;
-            box-shadow: 0 0 12px rgba(203, 213, 225, 0.2);
         }}
 
         .rank-badge.rank-3 {{
-            background: linear-gradient(135deg, rgba(234, 88, 12, 0.25), rgba(180, 83, 9, 0.25));
+            background: rgba(234, 88, 12, 0.2);
             border-color: var(--accent-bronze);
             color: #fdba74;
-            box-shadow: 0 0 12px rgba(234, 88, 12, 0.2);
         }}
 
         .game-info {{
@@ -569,19 +546,17 @@ def generate_page_html(date_str, items, all_dates, is_root=False):
         }}
 
         .game-title {{
-            font-family: 'Outfit', sans-serif;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             color: #ffffff;
-            line-height: 1.3;
-            margin-bottom: 3px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            line-height: 1.3;
         }}
 
         .rank-label {{
-            font-size: 12px;
+            font-size: 11px;
             color: var(--text-muted);
             font-weight: 500;
         }}
@@ -589,67 +564,86 @@ def generate_page_html(date_str, items, all_dates, is_root=False):
         .card-right {{
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 10px;
             flex-shrink: 0;
         }}
 
         .price-pill {{
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 13px;
+            padding: 4px 9px;
+            border-radius: 6px;
+            font-size: 12px;
             font-weight: 700;
-            letter-spacing: 0.3px;
             white-space: nowrap;
         }}
 
         .price-pill.free {{
             background: var(--accent-green-bg);
             color: #34d399;
-            border: 1px solid rgba(16, 185, 129, 0.35);
+            border: 1px solid rgba(16, 185, 129, 0.3);
         }}
 
         .price-pill.paid {{
-            background: rgba(56, 189, 248, 0.12);
+            background: rgba(56, 189, 248, 0.1);
             color: #7dd3fc;
-            border: 1px solid rgba(56, 189, 248, 0.25);
+            border: 1px solid rgba(56, 189, 248, 0.2);
         }}
 
         .store-btn {{
-            background: linear-gradient(135deg, #0284c7, #2563eb);
+            background: #0284c7;
             color: #ffffff;
-            padding: 8px 16px;
-            border-radius: 9px;
-            font-size: 13px;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 12px;
             font-weight: 600;
             text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
             white-space: nowrap;
+            transition: background 0.15s;
         }}
 
         .store-btn:hover {{
-            background: linear-gradient(135deg, #0369a1, #1d4ed8);
-            transform: translateY(-1px);
-            box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
+            background: #0369a1;
         }}
 
-        /* Responsive */
-        @media (max-width: 640px) {{
+        /* Show More Button */
+        .show-more-box {{
+            margin-top: 12px;
+            text-align: center;
+        }}
+
+        .show-more-btn {{
+            background: #131e31;
+            border: 1px solid var(--border);
+            color: #7dd3fc;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.15s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }}
+
+        .show-more-btn:hover {{
+            background: #182842;
+            border-color: var(--primary);
+        }}
+
+        @media (max-width: 600px) {{
             .game-card {{
-                flex-direction: column;
-                align-items: stretch;
-                gap: 12px;
-            }}
-            .card-right {{
-                justify-content: space-between;
+                padding: 10px 12px;
             }}
             .game-title {{
                 white-space: normal;
+                font-size: 13px;
             }}
-            .selector-box {{
+            .card-right {{
+                gap: 6px;
+            }}
+            .date-dropdown {{
                 max-width: 100%;
             }}
         }}
@@ -663,7 +657,7 @@ def generate_page_html(date_str, items, all_dates, is_root=False):
                     <div class="brand-icon">🏆</div>
                     <div class="brand-text">
                         <h1>FINAL BOSS ALERTS</h1>
-                        <p>Daily Steam Top Sellers Intelligence & Archives</p>
+                        <p>Daily Steam Top Sellers Tracker</p>
                     </div>
                 </a>
                 <div class="header-badges">
@@ -679,28 +673,38 @@ def generate_page_html(date_str, items, all_dates, is_root=False):
                     {next_btn}
                     <a href="{today_link}" class="nav-btn today-btn">⚡ Today</a>
                 </div>
-                <div class="selector-box">
-                    <select id="date-select" class="date-dropdown" aria-label="Select archive date">
-                        {dropdown_markup}
-                    </select>
-                </div>
+                <select id="date-select" class="date-dropdown" aria-label="Select archive date">
+                    {dropdown_markup}
+                </select>
             </div>
 
             <div class="filter-row">
-                <div class="search-box">
-                    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                    <input type="text" id="search-input" class="search-input" placeholder="Filter games by title..." autocomplete="off">
+                <div class="tabs-group">
+                    <button class="tab-btn active" data-view="top10">🏆 Top 10</button>
+                    <button class="tab-btn" data-view="all">📋 All 30</button>
+                    <button class="tab-btn" data-view="free">🎮 Free Only</button>
                 </div>
-                <div class="current-summary">
-                    <span>Filtered for: <strong>{formatted_date}</strong></span>
-                    <span id="visible-count" class="count-badge">{len(items)} Games</span>
+                <div class="search-box">
+                    <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="search-input" class="search-input" placeholder="Search games..." autocomplete="off">
                 </div>
             </div>
         </section>
 
+        <div class="list-summary">
+            <span>Filtered list for: <strong style="color: #f1f5f9;">{formatted_date}</strong></span>
+            <span id="count-badge">Showing Top 10</span>
+        </div>
+
         <main class="games-list" id="games-container">
             {cards_markup}
         </main>
+
+        <div class="show-more-box" id="show-more-box">
+            <button class="show-more-btn" id="show-more-btn">
+                <span>▼ Show Remaining 20 Games (Ranks 11–30)</span>
+            </button>
+        </div>
     </div>
 
     <script>
@@ -708,33 +712,93 @@ def generate_page_html(date_str, items, all_dates, is_root=False):
         const dateSelect = document.getElementById('date-select');
         if (dateSelect) {{
             dateSelect.addEventListener('change', (e) => {{
-                if (e.target.value) {{
-                    window.location.href = e.target.value;
-                }}
+                if (e.target.value) window.location.href = e.target.value;
             }});
         }}
 
-        // Realtime Search Filter
-        const searchInput = document.getElementById('search-input');
+        // Tabs & Filtering
+        let currentView = 'top10';
+        const tabBtns = document.querySelectorAll('.tab-btn');
         const gameCards = document.querySelectorAll('.game-card');
-        const countDisplay = document.getElementById('visible-count');
+        const showMoreBox = document.getElementById('show-more-box');
+        const showMoreBtn = document.getElementById('show-more-btn');
+        const searchInput = document.getElementById('search-input');
+        const countBadge = document.getElementById('count-badge');
+
+        function updateDisplay() {{
+            const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+            let visible = 0;
+
+            gameCards.forEach(card => {{
+                const rank = parseInt(card.getAttribute('data-rank') || '0', 10);
+                const isFree = card.getAttribute('data-free') === 'true';
+                const title = (card.getAttribute('data-title') || '').toLowerCase();
+
+                let matchesFilter = true;
+                if (query) {{
+                    matchesFilter = title.includes(query);
+                }} else {{
+                    if (currentView === 'top10') {{
+                        matchesFilter = (rank <= 10);
+                    }} else if (currentView === 'free') {{
+                        matchesFilter = isFree;
+                    }} else if (currentView === 'all') {{
+                        matchesFilter = true;
+                    }}
+                }}
+
+                if (matchesFilter) {{
+                    card.style.display = 'flex';
+                    visible++;
+                }} else {{
+                    card.style.display = 'none';
+                }}
+            }});
+
+            if (showMoreBox) {{
+                if (currentView === 'top10' && !query) {{
+                    showMoreBox.style.display = 'block';
+                }} else {{
+                    showMoreBox.style.display = 'none';
+                }}
+            }}
+
+            if (countBadge) {{
+                if (query) {{
+                    countBadge.textContent = visible + ' matching games';
+                }} else if (currentView === 'top10') {{
+                    countBadge.textContent = 'Showing Top 10 of 30';
+                }} else if (currentView === 'free') {{
+                    countBadge.textContent = visible + ' Free to Play games';
+                }} else {{
+                    countBadge.textContent = 'Showing all 30 games';
+                }}
+            }}
+        }}
+
+        tabBtns.forEach(btn => {{
+            btn.addEventListener('click', () => {{
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentView = btn.getAttribute('data-view');
+                if (searchInput) searchInput.value = '';
+                updateDisplay();
+            }});
+        }});
+
+        if (showMoreBtn) {{
+            showMoreBtn.addEventListener('click', () => {{
+                tabBtns.forEach(b => b.classList.remove('active'));
+                const allBtn = document.querySelector('.tab-btn[data-view="all"]');
+                if (allBtn) allBtn.classList.add('active');
+                currentView = 'all';
+                updateDisplay();
+            }});
+        }}
 
         if (searchInput) {{
-            searchInput.addEventListener('input', (e) => {{
-                const query = e.target.value.toLowerCase().trim();
-                let count = 0;
-                gameCards.forEach(card => {{
-                    const title = (card.getAttribute('data-title') || '').toLowerCase();
-                    if (title.includes(query)) {{
-                        card.style.display = '';
-                        count++;
-                    }} else {{
-                        card.style.display = 'none';
-                    }}
-                }});
-                if (countDisplay) {{
-                    countDisplay.textContent = count + ' of ' + gameCards.length + ' Games';
-                }}
+            searchInput.addEventListener('input', () => {{
+                updateDisplay();
             }});
         }}
 
@@ -742,8 +806,7 @@ def generate_page_html(date_str, items, all_dates, is_root=False):
         const urlParams = new URLSearchParams(window.location.search);
         const reqDate = urlParams.get('date');
         if (reqDate && reqDate !== '{date_str}') {{
-            const target = '{base_path}archive/' + reqDate + '.html';
-            window.location.replace(target);
+            window.location.replace('{base_path}archive/' + reqDate + '.html');
         }}
 
         // Keyboard navigation ([ for Prev, ] for Next)
