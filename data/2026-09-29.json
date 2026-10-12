@@ -1,0 +1,186 @@
+{
+  "date": "2026-09-29",
+  "count": 30,
+  "items": [
+    {
+      "rank": 1,
+      "name": "Minecraft Dungeons II",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/1912410/Minecraft_Dungeons_II/"
+    },
+    {
+      "rank": 2,
+      "name": "ACE COMBAT 8: WINGS OF THEVE",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/2288340/ACE_COMBAT_8_WINGS_OF_THEVE/"
+    },
+    {
+      "rank": 3,
+      "name": "WARDOGS",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/1867240/WARDOGS/"
+    },
+    {
+      "rank": 4,
+      "name": "AION 2",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3393110/AION_2/"
+    },
+    {
+      "rank": 5,
+      "name": "Transport Fever 3",
+      "price": "$49.99",
+      "url": "https://store.steampowered.com/app/3493540/Transport_Fever_3/"
+    },
+    {
+      "rank": 6,
+      "name": "Nivalis Nights",
+      "price": "$22.49",
+      "url": "https://store.steampowered.com/app/1488490/Nivalis_Nights/"
+    },
+    {
+      "rank": 7,
+      "name": "American Truck Simulator",
+      "price": "$4.99",
+      "url": "https://store.steampowered.com/app/270880/American_Truck_Simulator/"
+    },
+    {
+      "rank": 8,
+      "name": "Aniimo",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/4126040/Aniimo/"
+    },
+    {
+      "rank": 9,
+      "name": "Dressmaker",
+      "price": "$14.99",
+      "url": "https://store.steampowered.com/app/4019220/Dressmaker/"
+    },
+    {
+      "rank": 10,
+      "name": "American Truck Simulator - Road Trip: Ford",
+      "price": "$7.99",
+      "url": "https://store.steampowered.com/app/3793200/American_Truck_Simulator__Road_Trip_Ford/"
+    },
+    {
+      "rank": 11,
+      "name": "CONTROL Resonant",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/3669870/CONTROL_Resonant/"
+    },
+    {
+      "rank": 12,
+      "name": "The Witcher 3: Wild Hunt \u2014 Remastered",
+      "price": "$24.99",
+      "url": "https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt__Remastered/"
+    },
+    {
+      "rank": 13,
+      "name": "Magic: The Gathering Arena",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/2141910/Magic_The_Gathering_Arena/"
+    },
+    {
+      "rank": 14,
+      "name": "Once Human",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/2139460/Once_Human/"
+    },
+    {
+      "rank": 15,
+      "name": "Gears of War: E-Day",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/3010850/Gears_of_War_EDay/"
+    },
+    {
+      "rank": 16,
+      "name": "Warframe",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/230410/Warframe/"
+    },
+    {
+      "rank": 17,
+      "name": "EA SPORTS FC\u2122 27",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27/"
+    },
+    {
+      "rank": 18,
+      "name": "Apex Legends\u2122",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1172470/Apex_Legends/"
+    },
+    {
+      "rank": 19,
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/"
+    },
+    {
+      "rank": 20,
+      "name": "RuneScape: Dragonwilds",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/1374490/RuneScape_Dragonwilds/"
+    },
+    {
+      "rank": 21,
+      "name": "Total War: WARHAMMER III",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/1142710/Total_War_WARHAMMER_III/"
+    },
+    {
+      "rank": 22,
+      "name": "HELLDIVERS\u2122 2",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/553850/HELLDIVERS_2/"
+    },
+    {
+      "rank": 23,
+      "name": "Active Matter",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/2887580/Active_Matter/"
+    },
+    {
+      "rank": 24,
+      "name": "Wuthering Waves",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3513350/Wuthering_Waves/"
+    },
+    {
+      "rank": 25,
+      "name": "EA SPORTS\u2122 Madden NFL 27",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/3940610/EA_SPORTS_Madden_NFL_27/"
+    },
+    {
+      "rank": 26,
+      "name": "Persona 3 Reload",
+      "price": "$17.99",
+      "url": "https://store.steampowered.com/app/2161700/Persona_3_Reload/"
+    },
+    {
+      "rank": 27,
+      "name": "Jurassic World Evolution 3",
+      "price": "$40.19",
+      "url": "https://store.steampowered.com/app/2958130/Jurassic_World_Evolution_3/"
+    },
+    {
+      "rank": 28,
+      "name": "DARK SOULS\u2122 III",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/374320/DARK_SOULS_III/"
+    },
+    {
+      "rank": 29,
+      "name": "Dead by Daylight",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/"
+    },
+    {
+      "rank": 30,
+      "name": "Dune: Awakening",
+      "price": "$24.99",
+      "url": "https://store.steampowered.com/app/1172710/Dune_Awakening/"
+    }
+  ]
+}

@@ -21,5 +21,4 @@ Thumbs.db
 .idea/
 
 # Generated site & build outputs
-index.html
 _site/

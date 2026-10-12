@@ -5,9 +5,9 @@ on:
     - cron: '0 14 * * *'
   workflow_dispatch:
 
-# Permissions required for deploying to GitHub Pages
+# Permissions required for committing archives and deploying to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -25,6 +25,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -41,6 +43,12 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: python steam_alerts.py
 
+      - name: Commit and push archives
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update daily Steam report and archives"
+          file_pattern: 'index.html archive/* data/*'
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -48,6 +56,8 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html _site/
+          if [ -d "archive" ]; then cp -r archive _site/; fi
+          if [ -d "data" ]; then cp -r data _site/; fi
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

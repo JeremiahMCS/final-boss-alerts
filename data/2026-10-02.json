@@ -1,0 +1,186 @@
+{
+  "date": "2026-10-02",
+  "count": 30,
+  "items": [
+    {
+      "rank": 1,
+      "name": "Gears of War: E-Day",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/3010850/Gears_of_War_EDay/"
+    },
+    {
+      "rank": 2,
+      "name": "ACE COMBAT 8: WINGS OF THEVE",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/2288340/ACE_COMBAT_8_WINGS_OF_THEVE/"
+    },
+    {
+      "rank": 3,
+      "name": "AION 2",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3393110/AION_2/"
+    },
+    {
+      "rank": 4,
+      "name": "Warhammer 40,000: Space Marine 2",
+      "price": "$14.99",
+      "url": "https://store.steampowered.com/app/2183900/Warhammer_40000_Space_Marine_2/"
+    },
+    {
+      "rank": 5,
+      "name": "WARDOGS",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/1867240/WARDOGS/"
+    },
+    {
+      "rank": 6,
+      "name": "Cyberpunk 2077",
+      "price": "$17.99",
+      "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/"
+    },
+    {
+      "rank": 7,
+      "name": "Wuthering Waves",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3513350/Wuthering_Waves/"
+    },
+    {
+      "rank": 8,
+      "name": "Aniimo",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/4126040/Aniimo/"
+    },
+    {
+      "rank": 9,
+      "name": "Dressmaker",
+      "price": "$14.99",
+      "url": "https://store.steampowered.com/app/4019220/Dressmaker/"
+    },
+    {
+      "rank": 10,
+      "name": "Minecraft Dungeons II",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/1912410/Minecraft_Dungeons_II/"
+    },
+    {
+      "rank": 11,
+      "name": "Warframe",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/230410/Warframe/"
+    },
+    {
+      "rank": 12,
+      "name": "Crusader Kings III",
+      "price": "$14.99",
+      "url": "https://store.steampowered.com/app/1158310/Crusader_Kings_III/"
+    },
+    {
+      "rank": 13,
+      "name": "STAR WARS: Galactic Racer\u2122",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/4078430/STAR_WARS_Galactic_Racer/"
+    },
+    {
+      "rank": 14,
+      "name": "Team Fortress 2",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/440/Team_Fortress_2/"
+    },
+    {
+      "rank": 15,
+      "name": "The Outlast Trials",
+      "price": "$3.99",
+      "url": "https://store.steampowered.com/app/1304930/The_Outlast_Trials/"
+    },
+    {
+      "rank": 16,
+      "name": "Total War: WARHAMMER III",
+      "price": "$8.99",
+      "url": "https://store.steampowered.com/app/1142710/Total_War_WARHAMMER_III/"
+    },
+    {
+      "rank": 17,
+      "name": "CONTROL Resonant",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/3669870/CONTROL_Resonant/"
+    },
+    {
+      "rank": 18,
+      "name": "Baldur's Gate 3",
+      "price": "$41.99",
+      "url": "https://store.steampowered.com/app/1086940/Baldurs_Gate_3/"
+    },
+    {
+      "rank": 19,
+      "name": "HELLDIVERS\u2122 2",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/553850/HELLDIVERS_2/"
+    },
+    {
+      "rank": 20,
+      "name": "EA SPORTS FC\u2122 27",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27/"
+    },
+    {
+      "rank": 21,
+      "name": "Magic: The Gathering Arena",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/2141910/Magic_The_Gathering_Arena/"
+    },
+    {
+      "rank": 22,
+      "name": "The Elder Scrolls V: Skyrim Special Edition",
+      "price": "$3.99",
+      "url": "https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/"
+    },
+    {
+      "rank": 23,
+      "name": "Red Dead Redemption 2",
+      "price": "$14.99",
+      "url": "https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/"
+    },
+    {
+      "rank": 24,
+      "name": "Resident Evil Requiem",
+      "price": "$48.99",
+      "url": "https://store.steampowered.com/app/3764200/Resident_Evil_Requiem/"
+    },
+    {
+      "rank": 25,
+      "name": "American Truck Simulator",
+      "price": "$4.99",
+      "url": "https://store.steampowered.com/app/270880/American_Truck_Simulator/"
+    },
+    {
+      "rank": 26,
+      "name": "Apex Legends\u2122",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1172470/Apex_Legends/"
+    },
+    {
+      "rank": 27,
+      "name": "Bodycam",
+      "price": "$26.65",
+      "url": "https://store.steampowered.com/app/2406770/Bodycam/"
+    },
+    {
+      "rank": 28,
+      "name": "Cyberpunk 2077: Phantom Liberty",
+      "price": "$17.99",
+      "url": "https://store.steampowered.com/app/2138330/Cyberpunk_2077_Phantom_Liberty/"
+    },
+    {
+      "rank": 29,
+      "name": "Marvel's Spider-Man 2",
+      "price": "$40.19",
+      "url": "https://store.steampowered.com/app/2651280/Marvels_SpiderMan_2/"
+    },
+    {
+      "rank": 30,
+      "name": "Dead by Daylight",
+      "price": "$7.99",
+      "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/"
+    }
+  ]
+}

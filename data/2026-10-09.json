@@ -1,0 +1,186 @@
+{
+  "date": "2026-10-09",
+  "count": 30,
+  "items": [
+    {
+      "rank": 1,
+      "name": "Risk of Rain 2",
+      "price": "$8.24",
+      "url": "https://store.steampowered.com/app/632360/Risk_of_Rain_2/"
+    },
+    {
+      "rank": 2,
+      "name": "Risk of Rain 2: Hallowed Concepts",
+      "price": "$14.99",
+      "url": "https://store.steampowered.com/app/3055670/Risk_of_Rain_2_Hallowed_Concepts/"
+    },
+    {
+      "rank": 3,
+      "name": "STAR WARS: Galactic Racer\u2122",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/4078430/STAR_WARS_Galactic_Racer/"
+    },
+    {
+      "rank": 4,
+      "name": "AION 2",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3393110/AION_2/"
+    },
+    {
+      "rank": 5,
+      "name": "Dota 2",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/570/Dota_2/"
+    },
+    {
+      "rank": 6,
+      "name": "Gears of War: E-Day",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/3010850/Gears_of_War_EDay/"
+    },
+    {
+      "rank": 7,
+      "name": "Dragon's Dogma 2",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/2054970/Dragons_Dogma_2/"
+    },
+    {
+      "rank": 8,
+      "name": "Clive Barker's Hellraiser: Revival",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/1551980/Clive_Barkers_Hellraiser_Revival/"
+    },
+    {
+      "rank": 9,
+      "name": "ARC Raiders",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/1808500/ARC_Raiders/"
+    },
+    {
+      "rank": 10,
+      "name": "Dragon's Dogma 2: Dark Arisen Expansion",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/2593290/Dragons_Dogma_2_Dark_Arisen_Expansion/"
+    },
+    {
+      "rank": 11,
+      "name": "ARC Raiders - Frozen Trail Collector Set",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/5201760/ARC_Raiders__Frozen_Trail_Collector_Set/"
+    },
+    {
+      "rank": 12,
+      "name": "WARDOGS",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/1867240/WARDOGS/"
+    },
+    {
+      "rank": 13,
+      "name": "ACE COMBAT 8: WINGS OF THEVE",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/2288340/ACE_COMBAT_8_WINGS_OF_THEVE/"
+    },
+    {
+      "rank": 14,
+      "name": "Order of the Sinking Star",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/499170/Order_of_the_Sinking_Star/"
+    },
+    {
+      "rank": 15,
+      "name": "Dressmaker",
+      "price": "$14.99",
+      "url": "https://store.steampowered.com/app/4019220/Dressmaker/"
+    },
+    {
+      "rank": 16,
+      "name": "Warframe",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/230410/Warframe/"
+    },
+    {
+      "rank": 17,
+      "name": "EA SPORTS FC\u2122 27",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27/"
+    },
+    {
+      "rank": 18,
+      "name": "MapleStory",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/216150/MapleStory/"
+    },
+    {
+      "rank": 19,
+      "name": "Aniimo",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/4126040/Aniimo/"
+    },
+    {
+      "rank": 20,
+      "name": "Dead by Daylight",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/"
+    },
+    {
+      "rank": 21,
+      "name": "Call of Duty\u00ae: Modern Warfare\u00ae 4",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/4435490/Call_of_Duty_Modern_Warfare_4/"
+    },
+    {
+      "rank": 22,
+      "name": "Wuthering Waves",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3513350/Wuthering_Waves/"
+    },
+    {
+      "rank": 23,
+      "name": "Apex Legends\u2122",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1172470/Apex_Legends/"
+    },
+    {
+      "rank": 24,
+      "name": "Planet Zoo 2",
+      "price": "$49.99",
+      "url": "https://store.steampowered.com/app/3219030/Planet_Zoo_2/"
+    },
+    {
+      "rank": 25,
+      "name": "Silver Pines",
+      "price": "$22.26",
+      "url": "https://store.steampowered.com/app/2333000/Silver_Pines/"
+    },
+    {
+      "rank": 26,
+      "name": "Permafrost",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/2254990/Permafrost/"
+    },
+    {
+      "rank": 27,
+      "name": "HELLDIVERS\u2122 2",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/553850/HELLDIVERS_2/"
+    },
+    {
+      "rank": 28,
+      "name": "Car Park Capital",
+      "price": "$15.29",
+      "url": "https://store.steampowered.com/app/3031880/Car_Park_Capital/"
+    },
+    {
+      "rank": 29,
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/"
+    },
+    {
+      "rank": 30,
+      "name": "Once Human",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/2139460/Once_Human/"
+    }
+  ]
+}
