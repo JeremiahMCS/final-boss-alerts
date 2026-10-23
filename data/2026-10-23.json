@@ -1,0 +1,186 @@
+{
+  "date": "2026-10-23",
+  "count": 30,
+  "items": [
+    {
+      "name": "Call of Duty\u00ae: Modern Warfare\u00ae 4",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/4435490/Call_of_Duty_Modern_Warfare_4/",
+      "rank": 1
+    },
+    {
+      "name": "FINAL FANTASY RESONANCE",
+      "price": "$49.99",
+      "url": "https://store.steampowered.com/app/3259780/FINAL_FANTASY_RESONANCE/",
+      "rank": 2
+    },
+    {
+      "name": "Cyberpunk 2077",
+      "price": "$17.99",
+      "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
+      "rank": 3
+    },
+    {
+      "name": "AION 2",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3393110/AION_2/",
+      "rank": 4
+    },
+    {
+      "name": "Warrior Cats: Clans of the Forest",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/3960600/Warrior_Cats_Clans_of_the_Forest/",
+      "rank": 5
+    },
+    {
+      "name": "Cyberpunk 2077: Phantom Liberty",
+      "price": "$17.99",
+      "url": "https://store.steampowered.com/app/2138330/Cyberpunk_2077_Phantom_Liberty/",
+      "rank": 6
+    },
+    {
+      "name": "Wuthering Waves",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3513350/Wuthering_Waves/",
+      "rank": 7
+    },
+    {
+      "name": "MapleStory",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/216150/MapleStory/",
+      "rank": 8
+    },
+    {
+      "name": "Warframe",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/230410/Warframe/",
+      "rank": 9
+    },
+    {
+      "name": "STAR WARS: Galactic Racer\u2122",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/4078430/STAR_WARS_Galactic_Racer/",
+      "rank": 10
+    },
+    {
+      "name": "Once Human",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/2139460/Once_Human/",
+      "rank": 11
+    },
+    {
+      "name": "War Thunder",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/236390/War_Thunder/",
+      "rank": 12
+    },
+    {
+      "name": "HELLDIVERS\u2122 2",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/553850/HELLDIVERS_2/",
+      "rank": 13
+    },
+    {
+      "name": "WARDOGS",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/1867240/WARDOGS/",
+      "rank": 14
+    },
+    {
+      "name": "Enshrouded",
+      "price": "$35.99",
+      "url": "https://store.steampowered.com/app/1203620/Enshrouded/",
+      "rank": 15
+    },
+    {
+      "name": "Dead by Daylight",
+      "price": "$7.99",
+      "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/",
+      "rank": 16
+    },
+    {
+      "name": "Phantom Blade Zero",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/",
+      "rank": 17
+    },
+    {
+      "name": "EA SPORTS FC\u2122 27",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27/",
+      "rank": 18
+    },
+    {
+      "name": "NBA 2K27",
+      "price": "$48.99",
+      "url": "https://store.steampowered.com/app/4356430/NBA_2K27/",
+      "rank": 19
+    },
+    {
+      "name": "Planet Zoo 2",
+      "price": "$49.99",
+      "url": "https://store.steampowered.com/app/3219030/Planet_Zoo_2/",
+      "rank": 20
+    },
+    {
+      "name": "Aniimo",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/4126040/Aniimo/",
+      "rank": 21
+    },
+    {
+      "name": "THE FINALS",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/2073850/THE_FINALS/",
+      "rank": 22
+    },
+    {
+      "name": "Apex Legends\u2122",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1172470/Apex_Legends/",
+      "rank": 23
+    },
+    {
+      "name": "Dota 2",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/570/Dota_2/",
+      "rank": 24
+    },
+    {
+      "name": "Gears of War: E-Day",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/3010850/Gears_of_War_EDay/",
+      "rank": 25
+    },
+    {
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/",
+      "rank": 26
+    },
+    {
+      "name": "Warrior Cats: Clans of the Forest - Prophecy Pack",
+      "price": "$14.99",
+      "url": "https://store.steampowered.com/app/4467800/Warrior_Cats_Clans_of_the_Forest_Prophecy_Pack/",
+      "rank": 27
+    },
+    {
+      "name": "over the hill",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/2929250/over_the_hill/",
+      "rank": 28
+    },
+    {
+      "name": "Dressmaker",
+      "price": "$14.99",
+      "url": "https://store.steampowered.com/app/4019220/Dressmaker/",
+      "rank": 29
+    },
+    {
+      "name": "Fallout 76",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/1151340/Fallout_76/",
+      "rank": 30
+    }
+  ]
+}
