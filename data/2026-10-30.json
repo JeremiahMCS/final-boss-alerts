@@ -1,0 +1,186 @@
+{
+  "date": "2026-10-30",
+  "count": 30,
+  "items": [
+    {
+      "name": "Call of Duty\u00ae: Modern Warfare\u00ae 4",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/4435490/Call_of_Duty_Modern_Warfare_4/",
+      "rank": 1
+    },
+    {
+      "name": "Phantom Blade Zero",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/",
+      "rank": 2
+    },
+    {
+      "name": "AION 2",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3393110/AION_2/",
+      "rank": 3
+    },
+    {
+      "name": "Aniimo",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/4126040/Aniimo/",
+      "rank": 4
+    },
+    {
+      "name": "Crimson Desert Enhanced",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/3321460/Crimson_Desert_Enhanced/",
+      "rank": 5
+    },
+    {
+      "name": "Crimson Desert Enhanced: Charting the Unknown",
+      "price": "$24.99",
+      "url": "https://store.steampowered.com/app/5001840/Crimson_Desert_Enhanced_Charting_the_Unknown/",
+      "rank": 6
+    },
+    {
+      "name": "Probably Stolen - Cyberpunk Shopkeeper Sim",
+      "price": "$17.99",
+      "url": "https://store.steampowered.com/app/4348910/Probably_Stolen_Cyberpunk_Shopkeeper_Sim/",
+      "rank": 7
+    },
+    {
+      "name": "Moon Sweepers",
+      "price": "$8.99",
+      "url": "https://store.steampowered.com/app/5335510/Moon_Sweepers/",
+      "rank": 8
+    },
+    {
+      "name": "Queen's Domain",
+      "price": "$16.99",
+      "url": "https://store.steampowered.com/app/1799840/Queens_Domain/",
+      "rank": 9
+    },
+    {
+      "name": "Warframe",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/230410/Warframe/",
+      "rank": 10
+    },
+    {
+      "name": "FINAL FANTASY RESONANCE",
+      "price": "$49.99",
+      "url": "https://store.steampowered.com/app/3259780/FINAL_FANTASY_RESONANCE/",
+      "rank": 11
+    },
+    {
+      "name": "War Thunder",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/236390/War_Thunder/",
+      "rank": 12
+    },
+    {
+      "name": "MapleStory",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/216150/MapleStory/",
+      "rank": 13
+    },
+    {
+      "name": "Dead by Daylight",
+      "price": "$7.99",
+      "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/",
+      "rank": 14
+    },
+    {
+      "name": "Cyberpunk 2077",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
+      "rank": 15
+    },
+    {
+      "name": "The Wolf Among Us Remastered",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/3884860/The_Wolf_Among_Us_Remastered/",
+      "rank": 16
+    },
+    {
+      "name": "Age of Empires IV: Anniversary Edition",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/1466860/Age_of_Empires_IV_Anniversary_Edition/",
+      "rank": 17
+    },
+    {
+      "name": "NBA 2K27",
+      "price": "$45.00",
+      "url": "https://store.steampowered.com/app/4356430/NBA_2K27/",
+      "rank": 18
+    },
+    {
+      "name": "WARDOGS",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/1867240/WARDOGS/",
+      "rank": 19
+    },
+    {
+      "name": "STAR WARS: Galactic Racer\u2122",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/4078430/STAR_WARS_Galactic_Racer/",
+      "rank": 20
+    },
+    {
+      "name": "Terrible Lizards",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/2920220/Terrible_Lizards/",
+      "rank": 21
+    },
+    {
+      "name": "EA SPORTS FC\u2122 27",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27/",
+      "rank": 22
+    },
+    {
+      "name": "Age of Empires IV: Raiders of the North",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/4336170/Age_of_Empires_IV_Raiders_of_the_North/",
+      "rank": 23
+    },
+    {
+      "name": "Apex Legends\u2122",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1172470/Apex_Legends/",
+      "rank": 24
+    },
+    {
+      "name": "Enshrouded",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/1203620/Enshrouded/",
+      "rank": 25
+    },
+    {
+      "name": "Once Human",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/2139460/Once_Human/",
+      "rank": 26
+    },
+    {
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/",
+      "rank": 27
+    },
+    {
+      "name": "HELLDIVERS\u2122 2",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/553850/HELLDIVERS_2/",
+      "rank": 28
+    },
+    {
+      "name": "Scam With Your Friends",
+      "price": "$9.99",
+      "url": "https://store.steampowered.com/app/4954910/Scam_With_Your_Friends/",
+      "rank": 29
+    },
+    {
+      "name": "Cyberpunk 2077: Phantom Liberty",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/2138330/Cyberpunk_2077_Phantom_Liberty/",
+      "rank": 30
+    }
+  ]
+}
