@@ -1,0 +1,186 @@
+{
+  "date": "2026-11-06",
+  "count": 30,
+  "items": [
+    {
+      "name": "Call of Duty\u00ae: Modern Warfare\u00ae 4",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/4435490/Call_of_Duty_Modern_Warfare_4/",
+      "rank": 1
+    },
+    {
+      "name": "Call of Duty\u00ae",
+      "price": "Free / Unknown",
+      "url": "https://store.steampowered.com/app/1938090/Call_of_Duty/",
+      "rank": 2
+    },
+    {
+      "name": "AION 2",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3393110/AION_2/",
+      "rank": 3
+    },
+    {
+      "name": "Phantom Blade Zero",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/",
+      "rank": 4
+    },
+    {
+      "name": "Call of Duty\u00ae: Warzone\u2122",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1962663/Call_of_Duty_Warzone/",
+      "rank": 5
+    },
+    {
+      "name": "FINAL FANTASY XIV Online",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/39210/FINAL_FANTASY_XIV_Online/",
+      "rank": 6
+    },
+    {
+      "name": "Godzilla: Destroy All Monsters Melee Remastered",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/4251460/Godzilla_Destroy_All_Monsters_Melee_Remastered/",
+      "rank": 7
+    },
+    {
+      "name": "Warframe",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/230410/Warframe/",
+      "rank": 8
+    },
+    {
+      "name": "Apex Legends\u2122",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1172470/Apex_Legends/",
+      "rank": 9
+    },
+    {
+      "name": "FINAL FANTASY XIV: Evercold",
+      "price": "$44.99",
+      "url": "https://store.steampowered.com/app/4634220/FINAL_FANTASY_XIV_Evercold/",
+      "rank": 10
+    },
+    {
+      "name": "Queen's Domain",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/1799840/Queens_Domain/",
+      "rank": 11
+    },
+    {
+      "name": "Probably Stolen - Cyberpunk Shopkeeper Sim",
+      "price": "$17.99",
+      "url": "https://store.steampowered.com/app/4348910/Probably_Stolen_Cyberpunk_Shopkeeper_Sim/",
+      "rank": 12
+    },
+    {
+      "name": "Cyberpunk 2077",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
+      "rank": 13
+    },
+    {
+      "name": "Dead by Daylight",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/",
+      "rank": 14
+    },
+    {
+      "name": "MapleStory",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/216150/MapleStory/",
+      "rank": 15
+    },
+    {
+      "name": "Yu-Gi-Oh! Master Duel",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1449850/YuGiOh_Master_Duel/",
+      "rank": 16
+    },
+    {
+      "name": "Aniimo",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/4126040/Aniimo/",
+      "rank": 17
+    },
+    {
+      "name": "Find The Needle",
+      "price": "$12.74",
+      "url": "https://store.steampowered.com/app/5160800/Find_The_Needle/",
+      "rank": 18
+    },
+    {
+      "name": "Moon Sweepers",
+      "price": "$8.99",
+      "url": "https://store.steampowered.com/app/5335510/Moon_Sweepers/",
+      "rank": 19
+    },
+    {
+      "name": "Crimson Desert Enhanced",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/3321460/Crimson_Desert_Enhanced/",
+      "rank": 20
+    },
+    {
+      "name": "EA SPORTS FC\u2122 27",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27/",
+      "rank": 21
+    },
+    {
+      "name": "NBA 2K27",
+      "price": "$45.00",
+      "url": "https://store.steampowered.com/app/4356430/NBA_2K27/",
+      "rank": 22
+    },
+    {
+      "name": "Age of Wonders 4",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/1669000/Age_of_Wonders_4/",
+      "rank": 23
+    },
+    {
+      "name": "Underkeep",
+      "price": "$19.50",
+      "url": "https://store.steampowered.com/app/2411200/Underkeep/",
+      "rank": 24
+    },
+    {
+      "name": "War Thunder",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/236390/War_Thunder/",
+      "rank": 25
+    },
+    {
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/",
+      "rank": 26
+    },
+    {
+      "name": "Loftia",
+      "price": "$24.89",
+      "url": "https://store.steampowered.com/app/2320980/Loftia/",
+      "rank": 27
+    },
+    {
+      "name": "WARDOGS",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/1867240/WARDOGS/",
+      "rank": 28
+    },
+    {
+      "name": "CONTROL Resonant",
+      "price": "$47.99",
+      "url": "https://store.steampowered.com/app/3669870/CONTROL_Resonant/",
+      "rank": 29
+    },
+    {
+      "name": "PAYDAY 3",
+      "price": "$8.99",
+      "url": "https://store.steampowered.com/app/1272080/PAYDAY_3/",
+      "rank": 30
+    }
+  ]
+}
