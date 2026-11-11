@@ -1,0 +1,186 @@
+{
+  "date": "2026-11-11",
+  "count": 30,
+  "items": [
+    {
+      "name": "Apex Legends\u2122",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1172470/Apex_Legends/",
+      "rank": 1
+    },
+    {
+      "name": "Call of Duty\u00ae: Modern Warfare\u00ae 4",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/4435490/Call_of_Duty_Modern_Warfare_4/",
+      "rank": 2
+    },
+    {
+      "name": "AION 2",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3393110/AION_2/",
+      "rank": 3
+    },
+    {
+      "name": "ROB RUN",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/4262460/ROB_RUN/",
+      "rank": 4
+    },
+    {
+      "name": "Warhammer Survivors",
+      "price": "$7.19",
+      "url": "https://store.steampowered.com/app/3669620/Warhammer_Survivors/",
+      "rank": 5
+    },
+    {
+      "name": "Bodycam",
+      "price": "$33.32",
+      "url": "https://store.steampowered.com/app/2406770/Bodycam/",
+      "rank": 6
+    },
+    {
+      "name": "Phantom Blade Zero",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/",
+      "rank": 7
+    },
+    {
+      "name": "War Thunder",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/236390/War_Thunder/",
+      "rank": 8
+    },
+    {
+      "name": "Warframe",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/230410/Warframe/",
+      "rank": 9
+    },
+    {
+      "name": "Call of Duty\u00ae: Warzone\u2122",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1962663/Call_of_Duty_Warzone/",
+      "rank": 10
+    },
+    {
+      "name": "MapleStory",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/216150/MapleStory/",
+      "rank": 11
+    },
+    {
+      "name": "Casualties: Unknown",
+      "price": "$19.54",
+      "url": "https://store.steampowered.com/app/4576490/Casualties_Unknown/",
+      "rank": 12
+    },
+    {
+      "name": "Football Manager 27",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/4530370/Football_Manager_27/",
+      "rank": 13
+    },
+    {
+      "name": "FINAL FANTASY XIV Online",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/39210/FINAL_FANTASY_XIV_Online/",
+      "rank": 14
+    },
+    {
+      "name": "Cyberpunk 2077",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
+      "rank": 15
+    },
+    {
+      "name": "DREADMOOR",
+      "price": "$17.99",
+      "url": "https://store.steampowered.com/app/3629430/DREADMOOR/",
+      "rank": 16
+    },
+    {
+      "name": "Dead by Daylight",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/",
+      "rank": 17
+    },
+    {
+      "name": "Zenless Zone Zero",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/4162040/Zenless_Zone_Zero/",
+      "rank": 18
+    },
+    {
+      "name": "Crimson Desert Enhanced",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/3321460/Crimson_Desert_Enhanced/",
+      "rank": 19
+    },
+    {
+      "name": "Magic: The Gathering Arena",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/2141910/Magic_The_Gathering_Arena/",
+      "rank": 20
+    },
+    {
+      "name": "Probably Stolen - Cyberpunk Shopkeeper Sim",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/4348910/Probably_Stolen_Cyberpunk_Shopkeeper_Sim/",
+      "rank": 21
+    },
+    {
+      "name": "WARDOGS",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/1867240/WARDOGS/",
+      "rank": 22
+    },
+    {
+      "name": "American Truck Simulator",
+      "price": "$4.99",
+      "url": "https://store.steampowered.com/app/270880/American_Truck_Simulator/",
+      "rank": 23
+    },
+    {
+      "name": "Mortal Shell II",
+      "price": "$37.49",
+      "url": "https://store.steampowered.com/app/2584270/Mortal_Shell_II/",
+      "rank": 24
+    },
+    {
+      "name": "NTE: Neverness to Everness",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/4508340/NTE_Neverness_to_Everness/",
+      "rank": 25
+    },
+    {
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/",
+      "rank": 26
+    },
+    {
+      "name": "Moon Sweepers",
+      "price": "$8.99",
+      "url": "https://store.steampowered.com/app/5335510/Moon_Sweepers/",
+      "rank": 27
+    },
+    {
+      "name": "Path of Exile 2",
+      "price": "Free / Unknown",
+      "url": "https://store.steampowered.com/app/2694490/Path_of_Exile_2/",
+      "rank": 28
+    },
+    {
+      "name": "Queen's Domain",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/1799840/Queens_Domain/",
+      "rank": 29
+    },
+    {
+      "name": "Booster Pack Heroes",
+      "price": "$6.99",
+      "url": "https://store.steampowered.com/app/4618570/Booster_Pack_Heroes/",
+      "rank": 30
+    }
+  ]
+}
