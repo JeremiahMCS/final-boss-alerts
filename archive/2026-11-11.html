@@ -464,7 +464,7 @@
                     </div>
                 </a>
                 <div class="header-badges">
-                    <span class="badge-live">● Latest</span>
+                    <span class="badge-archive">📁 Archive</span>
                 </div>
             </div>
         </header>
@@ -473,11 +473,12 @@
             <div class="nav-row">
                 <div class="nav-buttons">
                     <a href="2026-11-10.html" class="nav-btn">◀ Prev Day</a>
-                    <span class="nav-btn disabled">Next Day ▶</span>
+                    <a href="../index.html" class="nav-btn">Next Day ▶</a>
                     <a href="../index.html" class="nav-btn today-btn">⚡ Today</a>
                 </div>
                 <select id="date-select" class="date-dropdown" aria-label="Select archive date">
-                    <option value="../index.html" selected>Nov 11, 2026 (Wed) — Latest</option>
+                    <option value="../index.html" >Nov 12, 2026 (Thu) — Latest</option>
+<option value="2026-11-11.html" selected>Nov 11, 2026 (Wed)</option>
 <option value="2026-11-10.html" >Nov 10, 2026 (Tue)</option>
 <option value="2026-11-09.html" >Nov 09, 2026 (Mon)</option>
 <option value="2026-11-08.html" >Nov 08, 2026 (Sun)</option>
@@ -1170,8 +1171,8 @@
             if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
             if (e.key === '[' && '2026-11-10') {
                 window.location.href = '../archive/2026-11-10.html';
-            } else if (e.key === ']' && 'None') {
-                window.location.href = ('None' === '2026-11-11' ? '../index.html' : '../archive/None.html');
+            } else if (e.key === ']' && '2026-11-12') {
+                window.location.href = ('2026-11-12' === '2026-11-12' ? '../index.html' : '../archive/2026-11-12.html');
             }
         });
     </script>
