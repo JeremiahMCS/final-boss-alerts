@@ -1,0 +1,186 @@
+{
+  "date": "2026-11-13",
+  "count": 30,
+  "items": [
+    {
+      "name": "Call of Duty\u00ae: Modern Warfare\u00ae 4",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/4435490/Call_of_Duty_Modern_Warfare_4/",
+      "rank": 1
+    },
+    {
+      "name": "Bodycam",
+      "price": "$33.32",
+      "url": "https://store.steampowered.com/app/2406770/Bodycam/",
+      "rank": 2
+    },
+    {
+      "name": "Apex Legends\u2122",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1172470/Apex_Legends/",
+      "rank": 3
+    },
+    {
+      "name": "AION 2",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3393110/AION_2/",
+      "rank": 4
+    },
+    {
+      "name": "ROB RUN",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/4262460/ROB_RUN/",
+      "rank": 5
+    },
+    {
+      "name": "Where Winds Meet",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3564740/Where_Winds_Meet/",
+      "rank": 6
+    },
+    {
+      "name": "MapleStory",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/216150/MapleStory/",
+      "rank": 7
+    },
+    {
+      "name": "Slay the Spire 2",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/",
+      "rank": 8
+    },
+    {
+      "name": "WARDOGS",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/1867240/WARDOGS/",
+      "rank": 9
+    },
+    {
+      "name": "Warframe",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/230410/Warframe/",
+      "rank": 10
+    },
+    {
+      "name": "Limbus Company",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1973530/Limbus_Company/",
+      "rank": 11
+    },
+    {
+      "name": "Phantom Blade Zero",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/",
+      "rank": 12
+    },
+    {
+      "name": "Hearts of Iron IV",
+      "price": "$14.99",
+      "url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "rank": 13
+    },
+    {
+      "name": "War Thunder",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/236390/War_Thunder/",
+      "rank": 14
+    },
+    {
+      "name": "Wuthering Waves",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3513350/Wuthering_Waves/",
+      "rank": 15
+    },
+    {
+      "name": "Euro Truck Simulator 2",
+      "price": "$4.99",
+      "url": "https://store.steampowered.com/app/227300/Euro_Truck_Simulator_2/",
+      "rank": 16
+    },
+    {
+      "name": "EA SPORTS FC\u2122 27",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27/",
+      "rank": 17
+    },
+    {
+      "name": "One More Lawn",
+      "price": "$4.89",
+      "url": "https://store.steampowered.com/app/5378110/One_More_Lawn/",
+      "rank": 18
+    },
+    {
+      "name": "Cyberpunk 2077",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
+      "rank": 19
+    },
+    {
+      "name": "FINAL FANTASY XIV Online",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/39210/FINAL_FANTASY_XIV_Online/",
+      "rank": 20
+    },
+    {
+      "name": "Dice Hoarder",
+      "price": "$5.39",
+      "url": "https://store.steampowered.com/app/3687090/Dice_Hoarder/",
+      "rank": 21
+    },
+    {
+      "name": "BALL x PIT",
+      "price": "$7.49",
+      "url": "https://store.steampowered.com/app/2062430/BALL_x_PIT/",
+      "rank": 22
+    },
+    {
+      "name": "Main Sequence",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/2487190/Main_Sequence/",
+      "rank": 23
+    },
+    {
+      "name": "Call of Duty\u00ae: Warzone\u2122",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1962663/Call_of_Duty_Warzone/",
+      "rank": 24
+    },
+    {
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/",
+      "rank": 25
+    },
+    {
+      "name": "Aniimo",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/4126040/Aniimo/",
+      "rank": 26
+    },
+    {
+      "name": "Dead by Daylight",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/",
+      "rank": 27
+    },
+    {
+      "name": "Crimson Desert Enhanced",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/3321460/Crimson_Desert_Enhanced/",
+      "rank": 28
+    },
+    {
+      "name": "Magic: The Gathering Arena",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/2141910/Magic_The_Gathering_Arena/",
+      "rank": 29
+    },
+    {
+      "name": "Casualties: Unknown",
+      "price": "$19.54",
+      "url": "https://store.steampowered.com/app/4576490/Casualties_Unknown/",
+      "rank": 30
+    }
+  ]
+}
