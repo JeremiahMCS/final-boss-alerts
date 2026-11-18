@@ -83,8 +83,13 @@ def fetch_and_filter_steam_data():
             
             if not price.strip():
                 price = "TBA"
+
+            appid = (row.get('data-ds-appid') or '').split(',')[0].strip()
+            if not appid and '/app/' in store_url:
+                appid = store_url.split('/app/')[1].split('/')[0].strip()
                 
             valid_items.append({
+                "appid": appid,
                 "name": name,
                 "price": price,
                 "url": store_url
@@ -893,6 +898,17 @@ def save_and_generate_archives(items, date_str=None):
         inf.write(index_html)
     print("Successfully generated index.html and all archive pages.")
 
+def steam_link(appid, title, fallback_url=None):
+    """Formats a game title as a bold Slack link to its Steam store page, escaping &, <, and >."""
+    t = title.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    if not appid and fallback_url and "/app/" in fallback_url:
+        appid = fallback_url.split("/app/")[1].split("/")[0].strip()
+    if appid:
+        return f"*<https://store.steampowered.com/app/{appid}/|{t}>*"
+    if fallback_url:
+        return f"*<{fallback_url}|{t}>*"
+    return f"*{t}*"
+
 def format_and_send_slack(items, date_str=None):
     """Sends the top 10 items to Slack/Discord with a direct permanent link to that day's archive."""
     if not items:
@@ -906,7 +922,8 @@ def format_and_send_slack(items, date_str=None):
     
     game_lines = []
     for rank, item in enumerate(top_10_items, start=1):
-        game_lines.append(f"{rank}. *{item['name']}* — {item['price']} | <{item['url']}|Store Page>")
+        linked_title = steam_link(item.get('appid'), item['name'], item.get('url'))
+        game_lines.append(f"{rank}. {linked_title} — {item['price']}")
     
     if remaining_count > 0:
         game_lines.append(f"\n_...and {remaining_count} more_")
