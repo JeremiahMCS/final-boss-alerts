@@ -1,0 +1,216 @@
+{
+  "date": "2026-11-18",
+  "count": 30,
+  "items": [
+    {
+      "appid": "2406770",
+      "name": "Bodycam",
+      "price": "$26.65",
+      "url": "https://store.steampowered.com/app/2406770/Bodycam/",
+      "rank": 1
+    },
+    {
+      "appid": "3218350",
+      "name": "Melvor Idle 2: A RuneScape Adventure",
+      "price": "$13.49",
+      "url": "https://store.steampowered.com/app/3218350/Melvor_Idle_2_A_RuneScape_Adventure/",
+      "rank": 2
+    },
+    {
+      "appid": "1158310",
+      "name": "Crusader Kings III",
+      "price": "$49.99",
+      "url": "https://store.steampowered.com/app/1158310/Crusader_Kings_III/",
+      "rank": 3
+    },
+    {
+      "appid": "4435490",
+      "name": "Call of Duty\u00ae: Modern Warfare\u00ae 4",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/4435490/Call_of_Duty_Modern_Warfare_4/",
+      "rank": 4
+    },
+    {
+      "appid": "4262460",
+      "name": "ROB RUN",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/4262460/ROB_RUN/",
+      "rank": 5
+    },
+    {
+      "appid": "3188660",
+      "name": "Motocross The Game",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/3188660/Motocross_The_Game/",
+      "rank": 6
+    },
+    {
+      "appid": "3393110",
+      "name": "AION 2",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3393110/AION_2/",
+      "rank": 7
+    },
+    {
+      "appid": "4232910",
+      "name": "Crusader Kings III: Silk & Silver",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/4232910/Crusader_Kings_III_Silk_Silver/",
+      "rank": 8
+    },
+    {
+      "appid": "230410",
+      "name": "Warframe",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/230410/Warframe/",
+      "rank": 9
+    },
+    {
+      "appid": "5185890",
+      "name": "Zombies Aren't Real",
+      "price": "$8.99",
+      "url": "https://store.steampowered.com/app/5185890/Zombies_Arent_Real/",
+      "rank": 10
+    },
+    {
+      "appid": "3321460",
+      "name": "Crimson Desert Enhanced",
+      "price": "$55.99",
+      "url": "https://store.steampowered.com/app/3321460/Crimson_Desert_Enhanced/",
+      "rank": 11
+    },
+    {
+      "appid": "216150",
+      "name": "MapleStory",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/216150/MapleStory/",
+      "rank": 12
+    },
+    {
+      "appid": "311210",
+      "name": "Call of Duty\u00ae: Black Ops III",
+      "price": "$14.99",
+      "url": "https://store.steampowered.com/app/311210/Call_of_Duty_Black_Ops_III/",
+      "rank": 13
+    },
+    {
+      "appid": "1172470",
+      "name": "Apex Legends\u2122",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1172470/Apex_Legends/",
+      "rank": 14
+    },
+    {
+      "appid": "39210",
+      "name": "FINAL FANTASY XIV Online",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/39210/FINAL_FANTASY_XIV_Online/",
+      "rank": 15
+    },
+    {
+      "appid": "1771300",
+      "name": "Kingdom Come: Deliverance II",
+      "price": "$19.79",
+      "url": "https://store.steampowered.com/app/1771300/Kingdom_Come_Deliverance_II/",
+      "rank": 16
+    },
+    {
+      "appid": "2074920",
+      "name": "The First Descendant",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/2074920/The_First_Descendant/",
+      "rank": 17
+    },
+    {
+      "appid": "1962663",
+      "name": "Call of Duty\u00ae: Warzone\u2122",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1962663/Call_of_Duty_Warzone/",
+      "rank": 18
+    },
+    {
+      "appid": "5335510",
+      "name": "Moon Sweepers",
+      "price": "$8.99",
+      "url": "https://store.steampowered.com/app/5335510/Moon_Sweepers/",
+      "rank": 19
+    },
+    {
+      "appid": "236390",
+      "name": "War Thunder",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/236390/War_Thunder/",
+      "rank": 20
+    },
+    {
+      "appid": "4115450",
+      "name": "Phantom Blade Zero",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/",
+      "rank": 21
+    },
+    {
+      "appid": "1799840",
+      "name": "Queen's Domain",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/1799840/Queens_Domain/",
+      "rank": 22
+    },
+    {
+      "appid": "2868840",
+      "name": "Slay the Spire 2",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/",
+      "rank": 23
+    },
+    {
+      "appid": "381210",
+      "name": "Dead by Daylight",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/",
+      "rank": 24
+    },
+    {
+      "appid": "1091500",
+      "name": "Cyberpunk 2077",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
+      "rank": 25
+    },
+    {
+      "appid": "359550",
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/",
+      "rank": 26
+    },
+    {
+      "appid": "2739990",
+      "name": "Mahjong Soul",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/2739990/Mahjong_Soul/",
+      "rank": 27
+    },
+    {
+      "appid": "1151340",
+      "name": "Fallout 76",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/1151340/Fallout_76/",
+      "rank": 28
+    },
+    {
+      "appid": "1973530",
+      "name": "Limbus Company",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1973530/Limbus_Company/",
+      "rank": 29
+    },
+    {
+      "appid": "3564740",
+      "name": "Where Winds Meet",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3564740/Where_Winds_Meet/",
+      "rank": 30
+    }
+  ]
+}
