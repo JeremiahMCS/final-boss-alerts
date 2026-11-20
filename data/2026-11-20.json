@@ -1,0 +1,216 @@
+{
+  "date": "2026-11-20",
+  "count": 30,
+  "items": [
+    {
+      "appid": "2406770",
+      "name": "Bodycam",
+      "price": "$33.32",
+      "url": "https://store.steampowered.com/app/2406770/Bodycam/",
+      "rank": 1
+    },
+    {
+      "appid": "4262460",
+      "name": "ROB RUN",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/4262460/ROB_RUN/",
+      "rank": 2
+    },
+    {
+      "appid": "4435490",
+      "name": "Call of Duty\u00ae: Modern Warfare\u00ae 4",
+      "price": "$69.99",
+      "url": "https://store.steampowered.com/app/4435490/Call_of_Duty_Modern_Warfare_4/",
+      "rank": 3
+    },
+    {
+      "appid": "2215430",
+      "name": "Ghost of Tsushima DIRECTOR'S CUT",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/2215430/Ghost_of_Tsushima_DIRECTORS_CUT/",
+      "rank": 4
+    },
+    {
+      "appid": "1401590",
+      "name": "Disney Dreamlight Valley",
+      "price": "$23.99",
+      "url": "https://store.steampowered.com/app/1401590/Disney_Dreamlight_Valley/",
+      "rank": 5
+    },
+    {
+      "appid": "2075800",
+      "name": "STAR WARS Zero Company\u2122",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/2075800/STAR_WARS_Zero_Company/",
+      "rank": 6
+    },
+    {
+      "appid": "3321460",
+      "name": "Crimson Desert Enhanced",
+      "price": "$55.99",
+      "url": "https://store.steampowered.com/app/3321460/Crimson_Desert_Enhanced/",
+      "rank": 7
+    },
+    {
+      "appid": "4080220",
+      "name": "EA SPORTS FC\u2122 27",
+      "price": "$34.99",
+      "url": "https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27/",
+      "rank": 8
+    },
+    {
+      "appid": "216150",
+      "name": "MapleStory",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/216150/MapleStory/",
+      "rank": 9
+    },
+    {
+      "appid": "3393110",
+      "name": "AION 2",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3393110/AION_2/",
+      "rank": 10
+    },
+    {
+      "appid": "3240220",
+      "name": "Grand Theft Auto V Enhanced",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V_Enhanced/",
+      "rank": 11
+    },
+    {
+      "appid": "230410",
+      "name": "Warframe",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/230410/Warframe/",
+      "rank": 12
+    },
+    {
+      "appid": "1172470",
+      "name": "Apex Legends\u2122",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1172470/Apex_Legends/",
+      "rank": 13
+    },
+    {
+      "appid": "3280350",
+      "name": "DEATH STRANDING 2: ON THE BEACH",
+      "price": "$46.89",
+      "url": "https://store.steampowered.com/app/3280350/DEATH_STRANDING_2_ON_THE_BEACH/",
+      "rank": 14
+    },
+    {
+      "appid": "1158310",
+      "name": "Crusader Kings III",
+      "price": "$14.99",
+      "url": "https://store.steampowered.com/app/1158310/Crusader_Kings_III/",
+      "rank": 15
+    },
+    {
+      "appid": "1222670",
+      "name": "The Sims\u2122 4",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1222670/The_Sims_4/",
+      "rank": 16
+    },
+    {
+      "appid": "2651280",
+      "name": "Marvel's Spider-Man 2",
+      "price": "$40.19",
+      "url": "https://store.steampowered.com/app/2651280/Marvels_SpiderMan_2/",
+      "rank": 17
+    },
+    {
+      "appid": "2909400",
+      "name": "FINAL FANTASY VII REBIRTH",
+      "price": "$7.49",
+      "url": "https://store.steampowered.com/app/2909400/FINAL_FANTASY_VII_REBIRTH/",
+      "rank": 18
+    },
+    {
+      "appid": "3940610",
+      "name": "EA SPORTS\u2122 Madden NFL 27",
+      "price": "$34.99",
+      "url": "https://store.steampowered.com/app/3940610/EA_SPORTS_Madden_NFL_27/",
+      "rank": 19
+    },
+    {
+      "appid": "1091500",
+      "name": "Cyberpunk 2077",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
+      "rank": 20
+    },
+    {
+      "appid": "1817070",
+      "name": "Marvel\u2019s Spider-Man Remastered",
+      "price": "$23.99",
+      "url": "https://store.steampowered.com/app/1817070/Marvels_SpiderMan_Remastered/",
+      "rank": 21
+    },
+    {
+      "appid": "4115450",
+      "name": "Phantom Blade Zero",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/",
+      "rank": 22
+    },
+    {
+      "appid": "394360",
+      "name": "Hearts of Iron IV",
+      "price": "$14.99",
+      "url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "rank": 23
+    },
+    {
+      "appid": "5185890",
+      "name": "Zombies Aren't Real",
+      "price": "$9.99",
+      "url": "https://store.steampowered.com/app/5185890/Zombies_Arent_Real/",
+      "rank": 24
+    },
+    {
+      "appid": "5090170",
+      "name": "Disney Dreamlight Valley: The Keepsake Sea",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/5090170/Disney_Dreamlight_Valley_The_Keepsake_Sea/",
+      "rank": 25
+    },
+    {
+      "appid": "2272360",
+      "name": "Warhammer 40,000: Dawn of War IV",
+      "price": "$53.99",
+      "url": "https://store.steampowered.com/app/2272360/Warhammer_40000_Dawn_of_War_IV/",
+      "rank": 26
+    },
+    {
+      "appid": "381210",
+      "name": "Dead by Daylight",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/",
+      "rank": 27
+    },
+    {
+      "appid": "311210",
+      "name": "Call of Duty\u00ae: Black Ops III",
+      "price": "$14.99",
+      "url": "https://store.steampowered.com/app/311210/Call_of_Duty_Black_Ops_III/",
+      "rank": 28
+    },
+    {
+      "appid": "3489700",
+      "name": "Stellar Blade\u2122",
+      "price": "$40.19",
+      "url": "https://store.steampowered.com/app/3489700/Stellar_Blade/",
+      "rank": 29
+    },
+    {
+      "appid": "2322010",
+      "name": "God of War Ragnar\u00f6k",
+      "price": "$40.19",
+      "url": "https://store.steampowered.com/app/2322010/God_of_War_Ragnar\u00f6k/",
+      "rank": 30
+    }
+  ]
+}
