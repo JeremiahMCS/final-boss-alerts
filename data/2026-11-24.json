@@ -150,31 +150,31 @@
       "rank": 21
     },
     {
-      "appid": "1222140",
-      "name": "Detroit: Become Human",
-      "price": "$3.99",
-      "url": "https://store.steampowered.com/app/1222140/Detroit_Become_Human/",
-      "rank": 22
-    },
-    {
       "appid": "1222670",
       "name": "The Sims\u2122 4",
       "price": "Free",
       "url": "https://store.steampowered.com/app/1222670/The_Sims_4/",
-      "rank": 23
-    },
-    {
-      "appid": "2868840",
-      "name": "Slay the Spire 2",
-      "price": "$19.99",
-      "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/",
-      "rank": 24
+      "rank": 22
     },
     {
       "appid": "4080220",
       "name": "EA SPORTS FC\u2122 27",
       "price": "$34.99",
       "url": "https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27/",
+      "rank": 23
+    },
+    {
+      "appid": "1222140",
+      "name": "Detroit: Become Human",
+      "price": "$3.99",
+      "url": "https://store.steampowered.com/app/1222140/Detroit_Become_Human/",
+      "rank": 24
+    },
+    {
+      "appid": "2868840",
+      "name": "Slay the Spire 2",
+      "price": "$19.99",
+      "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/",
       "rank": 25
     },
     {
@@ -192,24 +192,24 @@
       "rank": 27
     },
     {
-      "appid": "2623190",
-      "name": "The Elder Scrolls IV: Oblivion Remastered",
-      "price": "$29.99",
-      "url": "https://store.steampowered.com/app/2623190/The_Elder_Scrolls_IV_Oblivion_Remastered/",
-      "rank": 28
-    },
-    {
       "appid": "5185890",
       "name": "Zombies Aren't Real",
       "price": "$9.99",
       "url": "https://store.steampowered.com/app/5185890/Zombies_Arent_Real/",
+      "rank": 28
+    },
+    {
+      "appid": "2623190",
+      "name": "The Elder Scrolls IV: Oblivion Remastered",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/2623190/The_Elder_Scrolls_IV_Oblivion_Remastered/",
       "rank": 29
     },
     {
-      "appid": "1401590",
-      "name": "Disney Dreamlight Valley",
-      "price": "$23.99",
-      "url": "https://store.steampowered.com/app/1401590/Disney_Dreamlight_Valley/",
+      "appid": "1091500",
+      "name": "Cyberpunk 2077",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
       "rank": 30
     }
   ]
