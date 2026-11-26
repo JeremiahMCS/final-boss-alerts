@@ -1,0 +1,216 @@
+{
+  "date": "2026-11-26",
+  "count": 30,
+  "items": [
+    {
+      "appid": "1172470",
+      "name": "Apex Legends\u2122",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1172470/Apex_Legends/",
+      "rank": 1
+    },
+    {
+      "appid": "3393110",
+      "name": "AION 2",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3393110/AION_2/",
+      "rank": 2
+    },
+    {
+      "appid": "4435490",
+      "name": "Call of Duty\u00ae: Modern Warfare\u00ae 4",
+      "price": "$59.49",
+      "url": "https://store.steampowered.com/app/4435490/Call_of_Duty_Modern_Warfare_4/",
+      "rank": 3
+    },
+    {
+      "appid": "2272360",
+      "name": "Warhammer 40,000: Dawn of War IV",
+      "price": "$53.99",
+      "url": "https://store.steampowered.com/app/2272360/Warhammer_40000_Dawn_of_War_IV/",
+      "rank": 4
+    },
+    {
+      "appid": "1174180",
+      "name": "Red Dead Redemption 2",
+      "price": "$14.99",
+      "url": "https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/",
+      "rank": 5
+    },
+    {
+      "appid": "4078430",
+      "name": "STAR WARS: Galactic Racer\u2122",
+      "price": "$47.99",
+      "url": "https://store.steampowered.com/app/4078430/STAR_WARS_Galactic_Racer/",
+      "rank": 6
+    },
+    {
+      "appid": "2947440",
+      "name": "SILENT HILL f",
+      "price": "$19.59",
+      "url": "https://store.steampowered.com/app/2947440/SILENT_HILL_f/",
+      "rank": 7
+    },
+    {
+      "appid": "216150",
+      "name": "MapleStory",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/216150/MapleStory/",
+      "rank": 8
+    },
+    {
+      "appid": "3240220",
+      "name": "Grand Theft Auto V Enhanced",
+      "price": "$19.79",
+      "url": "https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V_Enhanced/",
+      "rank": 9
+    },
+    {
+      "appid": "3768760",
+      "name": "007 First Light",
+      "price": "$34.99",
+      "url": "https://store.steampowered.com/app/3768760/007_First_Light/",
+      "rank": 10
+    },
+    {
+      "appid": "381210",
+      "name": "Dead by Daylight",
+      "price": "$15.38",
+      "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/",
+      "rank": 11
+    },
+    {
+      "appid": "3321460",
+      "name": "Crimson Desert Enhanced",
+      "price": "$55.99",
+      "url": "https://store.steampowered.com/app/3321460/Crimson_Desert_Enhanced/",
+      "rank": 12
+    },
+    {
+      "appid": "230410",
+      "name": "Warframe",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/230410/Warframe/",
+      "rank": 13
+    },
+    {
+      "appid": "1086940",
+      "name": "Baldur's Gate 3",
+      "price": "$41.99",
+      "url": "https://store.steampowered.com/app/1086940/Baldurs_Gate_3/",
+      "rank": 14
+    },
+    {
+      "appid": "4262460",
+      "name": "ROB RUN",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/4262460/ROB_RUN/",
+      "rank": 15
+    },
+    {
+      "appid": "2183900",
+      "name": "Warhammer 40,000: Space Marine 2",
+      "price": "$14.99",
+      "url": "https://store.steampowered.com/app/2183900/Warhammer_40000_Space_Marine_2/",
+      "rank": 16
+    },
+    {
+      "appid": "2221490",
+      "name": "Tom Clancy\u2019s The Division\u00ae 2",
+      "price": "$29.99",
+      "url": "https://store.steampowered.com/app/2221490/Tom_Clancys_The_Division_2/",
+      "rank": 17
+    },
+    {
+      "appid": "2406770",
+      "name": "Bodycam",
+      "price": "$33.32",
+      "url": "https://store.steampowered.com/app/2406770/Bodycam/",
+      "rank": 18
+    },
+    {
+      "appid": "1973530",
+      "name": "Limbus Company",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1973530/Limbus_Company/",
+      "rank": 19
+    },
+    {
+      "appid": "3564740",
+      "name": "Where Winds Meet",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/3564740/Where_Winds_Meet/",
+      "rank": 20
+    },
+    {
+      "appid": "4019220",
+      "name": "Dressmaker",
+      "price": "$11.99",
+      "url": "https://store.steampowered.com/app/4019220/Dressmaker/",
+      "rank": 21
+    },
+    {
+      "appid": "4080220",
+      "name": "EA SPORTS FC\u2122 27",
+      "price": "$34.99",
+      "url": "https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27/",
+      "rank": 22
+    },
+    {
+      "appid": "438100",
+      "name": "VRChat",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/438100/VRChat/",
+      "rank": 23
+    },
+    {
+      "appid": "3751260",
+      "name": "The Blood of Dawnwalker",
+      "price": "$55.99",
+      "url": "https://store.steampowered.com/app/3751260/The_Blood_of_Dawnwalker/",
+      "rank": 24
+    },
+    {
+      "appid": "1222670",
+      "name": "The Sims\u2122 4",
+      "price": "Free",
+      "url": "https://store.steampowered.com/app/1222670/The_Sims_4/",
+      "rank": 25
+    },
+    {
+      "appid": "2483190",
+      "name": "Forza Horizon 6",
+      "price": "$52.49",
+      "url": "https://store.steampowered.com/app/2483190/Forza_Horizon_6/",
+      "rank": 26
+    },
+    {
+      "appid": "5527800",
+      "name": "No Asteroids",
+      "price": "$6.39",
+      "url": "https://store.steampowered.com/app/5527800/No_Asteroids/",
+      "rank": 27
+    },
+    {
+      "appid": "2124490",
+      "name": "SILENT HILL 2",
+      "price": "$19.59",
+      "url": "https://store.steampowered.com/app/2124490/SILENT_HILL_2/",
+      "rank": 28
+    },
+    {
+      "appid": "2075800",
+      "name": "STAR WARS Zero Company\u2122",
+      "price": "$39.99",
+      "url": "https://store.steampowered.com/app/2075800/STAR_WARS_Zero_Company/",
+      "rank": 29
+    },
+    {
+      "appid": "1091500",
+      "name": "Cyberpunk 2077",
+      "price": "$59.99",
+      "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
+      "rank": 30
+    }
+  ]
+}
